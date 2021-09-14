@@ -1,0 +1,13 @@
+[
+    {
+        "name": "SpiderName",
+        "parameters": {
+            "Spider_Parameter_1": "Value",
+            "Spider_Parameter_2": "Value"
+        },
+        "options": {
+            "Scrapy_Option_1": "Value",
+            "Scrapy_Option_2": "Value"
+        }
+    }
+]

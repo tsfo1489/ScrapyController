@@ -1,12 +1,12 @@
 [
-    {
-        "name": "imdb",
-        "parameters": {
-            "ids": "6751668,5700672"
-        },
-        "options": {
-            "LOGLEVEL": "INFO",
-            "LOGFILE": "imdb.log"
-        }
+  {
+    "name": "imdb",
+    "parameters": {
+      "ids": "6751668,5700672"
+    },
+    "options": {
+      "LOG_LEVEL": "INFO",
+      "LOG_FILE": "imdb.log"
     }
+  }
 ]

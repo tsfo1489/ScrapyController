@@ -1,6 +1,7 @@
 import json
 import subprocess
 import hashlib
+import os
 from datetime import datetime
 
 def json_to_cmd(json_data):
@@ -22,14 +23,12 @@ def json_to_cmd(json_data):
     temp_hash = hashlib.md5(cmd.encode())
     temp_hash.update(str(datetime.now().timestamp()).encode())
     temp_log = temp_hash.hexdigest()
-    cmd += f' -s LOG_FILE={temp_log}.log'
-    final_log['TEMP_LOG'] = temp_log + '.log'
-    return cmd, final_log
+    temp_logfile = f'{os.getcwd()}/{temp_log}.log'
+    cmd += f' -s LOG_FILE={temp_logfile}'
+    final_log['TEMP_LOG'] = temp_logfile
+    return cmd, json_data['path'], final_log
 
 def executor(json_data: dict):
-    cmd, log_setting = json_to_cmd(json_data)
-    proc = subprocess.Popen(cmd.split())
-    return proc, log_setting
-
-if __name__ == '__main__':
-    executor(json.loads(open('test.json', 'r').read()))
+    cmd, path, log_setting = json_to_cmd(json_data)
+    proc = subprocess.Popen(cmd.split(), cwd=path, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    return proc.pid, log_setting

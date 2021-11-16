@@ -30,5 +30,10 @@ def json_to_cmd(json_data):
 
 def executor(json_data: dict):
     cmd, path, log_setting = json_to_cmd(json_data)
+    open(log_setting['TEMP_LOG'], 'w').close()
     proc = subprocess.Popen(cmd.split(), cwd=path, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     return proc.pid, log_setting
+
+if __name__ == '__main__':
+    pid, log_setting = executor(json.loads(open('test.json', 'r').read()))
+    print(pid, log_setting)

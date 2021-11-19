@@ -1,0 +1,10 @@
+{
+    "SKKU_GitHub": {
+        "path": "SKKU",
+        "name": "github"
+    },
+    "Test": {
+        "path": "TestPath",
+        "name": "TestName"
+    }
+}

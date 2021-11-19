@@ -1,7 +1,11 @@
 import json
+import os
+import zipfile
 from flask import Flask, request
+from werkzeug.utils import secure_filename
 from executor import executor
 from log import LogWatcher
+from zipfile import ZipFile
 
 CRAWLER_FILE_PATH = ''
 TASK_FILE_PATH = ''
@@ -25,15 +29,24 @@ def get_crawlers():
 
 @app.route('/crawlers/<crawler_name>', methods=['POST'])
 def add_crawlers(crawler_name):
+    print(crawler_name)
     new_crawler = request.get_json()
     if crawler_name in crawlers:
-        return json.dumps({'message': 'ERROR: Duplicate Crawler Name'}), 201
+        return json.dumps({'message': 'ERROR: Duplicate Crawler Name'}),201
     else:
         crawlers[crawler_name] = new_crawler
+        f = request.files['crawler']
+        fn = secure_filename(f.filename)
+        f.save(fn)
+        myzip = zipfile.ZipFile(fn,'w')
+        myzip.extract(fn,'./')
+        f.close()
+        myzip.close()
+        return json.dumps({'message': 'Success'}),200
+    '''
         f = open(CRAWLER_FILE_PATH, 'w')
         f.write(json.dumps(crawlers))
-        f.close()
-        return json.dumps({'message': 'Success'}), 200
+    '''
 
 @app.route('/tasks', methods=['GET'])
 def get_tasks():

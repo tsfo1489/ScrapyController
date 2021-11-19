@@ -1,0 +1,3296 @@
+2021-10-29 00:49:13 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: SKKU_GitHub)
+2021-10-29 00:49:13 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 18.9.0, Python 3.8.10 (default, Jun  2 2021, 10:49:15) - [GCC 9.4.0], pyOpenSSL 19.0.0 (OpenSSL 1.1.1f  31 Mar 2020), cryptography 2.8, Platform Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.29
+2021-10-29 00:49:13 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2021-10-29 00:49:13 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'SKKU_GitHub',
+ 'CONCURRENT_REQUESTS': 32,
+ 'LOG_FILE': '/home/jaewon/SCC/ScrapyController/ScrapyController/3ee2450c3dae5024537e2edd8ce9f54b.log',
+ 'NEWSPIDER_MODULE': 'SKKU_GitHub.spiders',
+ 'SPIDER_MODULES': ['SKKU_GitHub.spiders']}
+2021-10-29 00:49:13 [scrapy.extensions.telnet] INFO: Telnet Password: 77b91d2a9f84a832
+2021-10-29 00:49:13 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2021-10-29 00:49:13 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'SKKU_GitHub.middlewares.TokenRetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-10-29 00:49:13 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-10-29 00:49:13 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2021-10-29 00:49:13 [scrapy.core.engine] INFO: Spider opened
+2021-10-29 00:49:13 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-10-29 00:49:13 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-10-29 00:49:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/users/tsfo1489?page=1&per_page=100> (referer: None)
+2021-10-29 00:49:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/users/tsfo1489?page=1&per_page=100>
+{'followers': 0,
+ 'following': 0,
+ 'github_id': 'tsfo1489',
+ 'request_cnt': 65,
+ 'stars': 0,
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0,
+ 'total_repos': 12}
+2021-10-29 00:49:13 [py.warnings] WARNING: /home/jaewon/.local/lib/python3.8/site-packages/scrapy/spidermiddlewares/referer.py:287: RuntimeWarning: Could not load referrer policy 'origin-when-cross-origin, strict-origin-when-cross-origin'
+  warnings.warn(msg, RuntimeWarning)
+
+2021-10-29 00:49:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2021-10-01&to=2021-10-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2021-06-01&to=2021-06-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2021-07-01&to=2021-07-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2021-04-01&to=2021-04-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2021-05-01&to=2021-05-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-10-01&to=2021-10-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 6,
+ 'total_issues': 1}
+2021-10-29 00:49:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-10-01&to=2021-10-31>
+{'end_yymm': '2021-10-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 6,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 1,
+ 'stars': 0,
+ 'start_yymm': '2021-10-01'}
+2021-10-29 00:49:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-10-01&to=2021-10-31>
+{'github_id': 'tsfo1489',
+ 'owner_id': 'tsfo1489',
+ 'repo_name': 'ScrapyController'}
+2021-10-29 00:49:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-10-01&to=2021-10-31>
+{'github_id': 'tsfo1489', 'owner_id': 'tsfo1489', 'repo_name': 'GitHub_Crawl'}
+2021-10-29 00:49:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-06-01&to=2021-06-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 41,
+ 'total_issues': 0}
+2021-10-29 00:49:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489>
+{'achievements': None,
+ 'github_id': 'tsfo1489',
+ 'highlights': 'Pro',
+ 'target': 'badge'}
+2021-10-29 00:49:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2021-09-01&to=2021-09-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2021-08-01&to=2021-08-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-06-01&to=2021-06-30>
+{'end_yymm': '2021-06-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 41,
+ 'num_of_cr_repos': 1,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2021-06-01'}
+2021-10-29 00:49:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-06-01&to=2021-06-30>
+{'github_id': 'tsfo1489', 'owner_id': 'tsfo1489', 'repo_name': 'WebApiPractice'}
+2021-10-29 00:49:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-06-01&to=2021-06-30>
+{'github_id': 'tsfo1489', 'owner_id': 'tsfo1489', 'repo_name': 'W2V'}
+2021-10-29 00:49:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-06-01&to=2021-06-30>
+{'github_id': 'tsfo1489',
+ 'owner_id': 'tsfo1489',
+ 'repo_name': 'Naver_Movie_Crawler'}
+2021-10-29 00:49:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-07-01&to=2021-07-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 6,
+ 'total_issues': 0}
+2021-10-29 00:49:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-04-01&to=2021-04-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-05-01&to=2021-05-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-07-01&to=2021-07-31>
+{'end_yymm': '2021-07-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 6,
+ 'num_of_cr_repos': 1,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2021-07-01'}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-07-01&to=2021-07-31>
+{'github_id': 'tsfo1489', 'owner_id': 'tsfo1489', 'repo_name': 'NaverPy'}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-04-01&to=2021-04-30>
+{'end_yymm': '2021-04-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2021-04-01'}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-05-01&to=2021-05-31>
+{'end_yymm': '2021-05-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2021-05-01'}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-09-01&to=2021-09-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 5,
+ 'total_commits': 28,
+ 'total_issues': 0}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-08-01&to=2021-08-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 4,
+ 'total_issues': 6}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-09-01&to=2021-09-30>
+{'end_yymm': '2021-09-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 5,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 28,
+ 'num_of_cr_repos': 1,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2021-09-01'}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-09-01&to=2021-09-30>
+{'github_id': 'tsfo1489',
+ 'owner_id': 'tsfo1489',
+ 'repo_name': 'ScrapyController'}
+2021-10-29 00:49:15 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://api.github.com/repos/tsfo1489/ScrapyController?page=1&per_page=100> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-09-01&to=2021-09-30>
+{'github_id': 'tsfo1489', 'owner_id': 'tsfo1489', 'repo_name': 'GitHub_Crawl'}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-08-01&to=2021-08-31>
+{'end_yymm': '2021-08-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 4,
+ 'num_of_cr_repos': 1,
+ 'num_of_issues': 6,
+ 'stars': 0,
+ 'start_yymm': '2021-08-01'}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-08-01&to=2021-08-31>
+{'github_id': 'tsfo1489', 'owner_id': 'tsfo1489', 'repo_name': 'GitHub_Crawl'}
+2021-10-29 00:49:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler?page=1&per_page=100> (referer: https://github.com/tsfo1489/?tab=overview&from=2021-06-01&to=2021-06-30)
+2021-10-29 00:49:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2020-11-01&to=2020-11-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2021-02-01&to=2021-02-28> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2021-03-01&to=2021-03-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler?page=1&per_page=100>
+{'create_date': '2021-06-24T08:56:59Z',
+ 'forks_count': 0,
+ 'github_id': 'tsfo1489',
+ 'language': 'Python',
+ 'license': None,
+ 'path': 'tsfo1489/Naver_Movie_Crawler',
+ 'proj_short_desc': None,
+ 'repo_name': 'Naver_Movie_Crawler',
+ 'stargazers_count': 0,
+ 'update_date': '2021-06-25T05:58:29Z',
+ 'watchers': 1}
+2021-10-29 00:49:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2020-12-01&to=2020-12-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2020-10-01&to=2020-10-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2021-01-01&to=2021-01-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-11-01&to=2020-11-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-02-01&to=2021-02-28>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-11-01&to=2020-11-30>
+{'end_yymm': '2020-11-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2020-11-01'}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-02-01&to=2021-02-28>
+{'end_yymm': '2021-02-28',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2021-02-01'}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-03-01&to=2021-03-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/NaverPy?page=1&per_page=100> (referer: https://github.com/tsfo1489/?tab=overview&from=2021-07-01&to=2021-07-31)
+2021-10-29 00:49:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/W2V?page=1&per_page=100> (referer: https://github.com/tsfo1489/?tab=overview&from=2021-06-01&to=2021-06-30)
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-12-01&to=2020-12-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-10-01&to=2020-10-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-01-01&to=2021-01-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-03-01&to=2021-03-31>
+{'end_yymm': '2021-03-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2021-03-01'}
+2021-10-29 00:49:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2020-09-01&to=2020-09-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl?page=1&per_page=100> (referer: https://github.com/tsfo1489/?tab=overview&from=2021-10-01&to=2021-10-31)
+2021-10-29 00:49:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice?page=1&per_page=100> (referer: https://github.com/tsfo1489/?tab=overview&from=2021-06-01&to=2021-06-30)
+2021-10-29 00:49:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/ScrapyController?page=1&per_page=100> (referer: https://github.com/tsfo1489/?tab=overview&from=2021-10-01&to=2021-10-31)
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-12-01&to=2020-12-31>
+{'end_yymm': '2020-12-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2020-12-01'}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-10-01&to=2020-10-31>
+{'end_yymm': '2020-10-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2020-10-01'}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2021-01-01&to=2021-01-31>
+{'end_yymm': '2021-01-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2021-01-01'}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/NaverPy?page=1&per_page=100>
+{'create_date': '2021-07-01T00:08:30Z',
+ 'forks_count': 0,
+ 'github_id': 'tsfo1489',
+ 'language': 'Python',
+ 'license': None,
+ 'path': 'tsfo1489/NaverPy',
+ 'proj_short_desc': 'Naver Open API',
+ 'repo_name': 'NaverPy',
+ 'stargazers_count': 0,
+ 'update_date': '2021-07-02T08:42:00Z',
+ 'watchers': 1}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/W2V?page=1&per_page=100>
+{'create_date': '2021-06-24T08:13:07Z',
+ 'forks_count': 0,
+ 'github_id': 'tsfo1489',
+ 'language': 'Python',
+ 'license': None,
+ 'path': 'tsfo1489/W2V',
+ 'proj_short_desc': None,
+ 'repo_name': 'W2V',
+ 'stargazers_count': 0,
+ 'update_date': '2021-06-24T12:13:50Z',
+ 'watchers': 1}
+2021-10-29 00:49:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2020-08-01&to=2020-08-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-09-01&to=2020-09-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-09-01&to=2020-09-30>
+{'end_yymm': '2020-09-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2020-09-01'}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl?page=1&per_page=100>
+{'create_date': '2021-08-19T14:35:37Z',
+ 'forks_count': 0,
+ 'github_id': 'tsfo1489',
+ 'language': 'Python',
+ 'license': None,
+ 'path': 'tsfo1489/GitHub_Crawl',
+ 'proj_short_desc': 'Description Test',
+ 'repo_name': 'GitHub_Crawl',
+ 'stargazers_count': 2,
+ 'update_date': '2021-10-12T07:00:38Z',
+ 'watchers': 1}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice?page=1&per_page=100>
+{'create_date': '2021-06-28T04:44:30Z',
+ 'forks_count': 0,
+ 'github_id': 'tsfo1489',
+ 'language': 'Python',
+ 'license': None,
+ 'path': 'tsfo1489/WebApiPractice',
+ 'proj_short_desc': None,
+ 'repo_name': 'WebApiPractice',
+ 'stargazers_count': 0,
+ 'update_date': '2021-06-30T08:11:36Z',
+ 'watchers': 1}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/ScrapyController?page=1&per_page=100>
+{'create_date': '2021-09-14T04:59:36Z',
+ 'forks_count': 0,
+ 'github_id': 'tsfo1489',
+ 'language': 'Python',
+ 'license': None,
+ 'path': 'tsfo1489/ScrapyController',
+ 'proj_short_desc': None,
+ 'repo_name': 'ScrapyController',
+ 'stargazers_count': 0,
+ 'update_date': '2021-10-28T15:34:38Z',
+ 'watchers': 1}
+2021-10-29 00:49:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-08-01&to=2020-08-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2020-06-01&to=2020-06-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-08-01&to=2020-08-31>
+{'end_yymm': '2020-08-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2020-08-01'}
+2021-10-29 00:49:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2020-07-01&to=2020-07-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2020-05-01&to=2020-05-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-06-01&to=2020-06-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2020-04-01&to=2020-04-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2020-02-01&to=2020-02-29> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2020-03-01&to=2020-03-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-06-01&to=2020-06-30>
+{'end_yymm': '2020-06-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2020-06-01'}
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-07-01&to=2020-07-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-05-01&to=2020-05-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-07-01&to=2020-07-31>
+{'end_yymm': '2020-07-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2020-07-01'}
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-05-01&to=2020-05-31>
+{'end_yymm': '2020-05-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2020-05-01'}
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-04-01&to=2020-04-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-02-01&to=2020-02-29>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-03-01&to=2020-03-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2020-01-01&to=2020-01-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-04-01&to=2020-04-30>
+{'end_yymm': '2020-04-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2020-04-01'}
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-02-01&to=2020-02-29>
+{'end_yymm': '2020-02-29',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2020-02-01'}
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-03-01&to=2020-03-31>
+{'end_yymm': '2020-03-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2020-03-01'}
+2021-10-29 00:49:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2019-12-01&to=2019-12-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-01-01&to=2020-01-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2020-01-01&to=2020-01-31>
+{'end_yymm': '2020-01-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2020-01-01'}
+2021-10-29 00:49:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2019-10-01&to=2019-10-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2019-09-01&to=2019-09-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-12-01&to=2019-12-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2019-11-01&to=2019-11-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-12-01&to=2019-12-31>
+{'end_yymm': '2019-12-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2019-12-01'}
+2021-10-29 00:49:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2019-07-01&to=2019-07-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2019-06-01&to=2019-06-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2019-08-01&to=2019-08-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-10-01&to=2019-10-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 14,
+ 'total_issues': 0}
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-10-01&to=2019-10-31>
+{'end_yymm': '2019-10-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 14,
+ 'num_of_cr_repos': 1,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2019-10-01'}
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-10-01&to=2019-10-31>
+{'github_id': 'tsfo1489', 'owner_id': 'tsfo1489', 'repo_name': 'OSSW_IoT'}
+2021-10-29 00:49:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-09-01&to=2019-09-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-11-01&to=2019-11-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-09-01&to=2019-09-30>
+{'end_yymm': '2019-09-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2019-09-01'}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-11-01&to=2019-11-30>
+{'end_yymm': '2019-11-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2019-11-01'}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-07-01&to=2019-07-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-06-01&to=2019-06-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-08-01&to=2019-08-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-07-01&to=2019-07-31>
+{'end_yymm': '2019-07-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2019-07-01'}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-06-01&to=2019-06-30>
+{'end_yymm': '2019-06-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2019-06-01'}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-08-01&to=2019-08-31>
+{'end_yymm': '2019-08-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2019-08-01'}
+2021-10-29 00:49:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2019-04-01&to=2019-04-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2019-05-01&to=2019-05-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-04-01&to=2019-04-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2019-03-01&to=2019-03-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2018-12-01&to=2018-12-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-04-01&to=2019-04-30>
+{'end_yymm': '2019-04-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2019-04-01'}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-05-01&to=2019-05-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2019-02-01&to=2019-02-28> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2019-01-01&to=2019-01-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-05-01&to=2019-05-31>
+{'end_yymm': '2019-05-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2019-05-01'}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-03-01&to=2019-03-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2018-10-01&to=2018-10-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2018-11-01&to=2018-11-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/OSSW_IoT?page=1&per_page=100> (referer: https://github.com/tsfo1489/?tab=overview&from=2019-10-01&to=2019-10-31)
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-03-01&to=2019-03-31>
+{'end_yymm': '2019-03-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2019-03-01'}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-12-01&to=2018-12-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-12-01&to=2018-12-31>
+{'end_yymm': '2018-12-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2018-12-01'}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-02-01&to=2019-02-28>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-01-01&to=2019-01-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-02-01&to=2019-02-28>
+{'end_yymm': '2019-02-28',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2019-02-01'}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2019-01-01&to=2019-01-31>
+{'end_yymm': '2019-01-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2019-01-01'}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-10-01&to=2018-10-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-11-01&to=2018-11-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/OSSW_IoT?page=1&per_page=100>
+{'create_date': '2019-10-22T08:55:09Z',
+ 'forks_count': 0,
+ 'github_id': 'tsfo1489',
+ 'language': 'C++',
+ 'license': None,
+ 'path': 'tsfo1489/OSSW_IoT',
+ 'proj_short_desc': None,
+ 'repo_name': 'OSSW_IoT',
+ 'stargazers_count': 0,
+ 'update_date': '2019-10-24T04:21:01Z',
+ 'watchers': 1}
+2021-10-29 00:49:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/Naver_Movie_Crawler> (referer: https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler?page=1&per_page=100)
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-10-01&to=2018-10-31>
+{'end_yymm': '2018-10-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2018-10-01'}
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-11-01&to=2018-11-30>
+{'end_yymm': '2018-11-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2018-11-01'}
+2021-10-29 00:49:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2018-09-01&to=2018-09-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/Naver_Movie_Crawler>
+{'commits_count': 11,
+ 'contributors': 1,
+ 'path': 'tsfo1489/Naver_Movie_Crawler',
+ 'readme': False,
+ 'release_count': 0,
+ 'release_ver': None,
+ 'request_cnt': 2,
+ 'target': 'main_page'}
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-09-01&to=2018-09-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-09-01&to=2018-09-30>
+{'end_yymm': '2018-09-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2018-09-01'}
+2021-10-29 00:49:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2018-08-01&to=2018-08-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2018-07-01&to=2018-07-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2018-05-01&to=2018-05-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2018-03-01&to=2018-03-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-08-01&to=2018-08-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2018-06-01&to=2018-06-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/users/tsfo1489/repos?page=1&per_page=100> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-08-01&to=2018-08-31>
+{'end_yymm': '2018-08-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2018-08-01'}
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-07-01&to=2018-07-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 39,
+ 'total_issues': 0}
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-05-01&to=2018-05-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-03-01&to=2018-03-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/W2V> (referer: https://api.github.com/repos/tsfo1489/W2V?page=1&per_page=100)
+2021-10-29 00:49:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits?page=1&per_page=100> (referer: https://github.com/tsfo1489/Naver_Movie_Crawler)
+2021-10-29 00:49:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2018-04-01&to=2018-04-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-07-01&to=2018-07-31>
+{'end_yymm': '2018-07-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 39,
+ 'num_of_cr_repos': 1,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2018-07-01'}
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-07-01&to=2018-07-31>
+{'github_id': 'tsfo1489',
+ 'owner_id': 'tsfo1489',
+ 'repo_name': 'Naver-Webtoon-Crawler'}
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-07-01&to=2018-07-31>
+{'github_id': 'tsfo1489', 'owner_id': 'tsfo1489', 'repo_name': 'BOJ'}
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-05-01&to=2018-05-31>
+{'end_yymm': '2018-05-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2018-05-01'}
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-03-01&to=2018-03-31>
+{'end_yymm': '2018-03-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2018-03-01'}
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-06-01&to=2018-06-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/users/tsfo1489/repos?page=1&per_page=100>
+{'github_id': 'tsfo1489', 'stars': 3, 'target': 'repo_star'}
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-06-01&to=2018-06-30>
+{'end_yymm': '2018-06-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2018-06-01'}
+2021-10-29 00:49:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2018-02-01&to=2018-02-28> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/WebApiPractice> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice?page=1&per_page=100)
+2021-10-29 00:49:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/ScrapyController> (referer: https://api.github.com/repos/tsfo1489/ScrapyController?page=1&per_page=100)
+2021-10-29 00:49:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/GitHub_Crawl> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl?page=1&per_page=100)
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/W2V>
+{'commits_count': 3,
+ 'contributors': 1,
+ 'path': 'tsfo1489/W2V',
+ 'readme': False,
+ 'release_count': 0,
+ 'release_ver': None,
+ 'request_cnt': 2,
+ 'target': 'main_page'}
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-04-01&to=2018-04-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 2,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-04-01&to=2018-04-30>
+{'end_yymm': '2018-04-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 2,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 1,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2018-04-01'}
+2021-10-29 00:49:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-02-01&to=2018-02-28>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/WebApiPractice>
+{'commits_count': 27,
+ 'contributors': 1,
+ 'path': 'tsfo1489/WebApiPractice',
+ 'readme': False,
+ 'release_count': 0,
+ 'release_ver': None,
+ 'request_cnt': 2,
+ 'target': 'main_page'}
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/ScrapyController>
+{'commits_count': 6,
+ 'contributors': 2,
+ 'path': 'tsfo1489/ScrapyController',
+ 'readme': False,
+ 'release_count': 0,
+ 'release_ver': None,
+ 'request_cnt': 2,
+ 'target': 'main_page'}
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/GitHub_Crawl>
+{'commits_count': 31,
+ 'contributors': 1,
+ 'path': 'tsfo1489/GitHub_Crawl',
+ 'readme': False,
+ 'release_count': 0,
+ 'release_ver': None,
+ 'request_cnt': 2,
+ 'target': 'main_page'}
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/NaverPy> (referer: https://api.github.com/repos/tsfo1489/NaverPy?page=1&per_page=100)
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler?page=1&per_page=100> (referer: https://github.com/tsfo1489/?tab=overview&from=2018-07-01&to=2018-07-31)
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ?page=1&per_page=100> (referer: https://github.com/tsfo1489/?tab=overview&from=2018-07-01&to=2018-07-31)
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-02-01&to=2018-02-28>
+{'end_yymm': '2018-02-28',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2018-02-01'}
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/c0838e44876ebb0ffb2db0cce4baa2aa67a16fd4?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits?page=1&per_page=100)
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/1dba5f8f8041a3cc59f36e565dbf92b677ebd11d?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits?page=1&per_page=100)
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2018-01-01&to=2018-01-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/NaverPy>
+{'commits_count': 6,
+ 'contributors': 1,
+ 'path': 'tsfo1489/NaverPy',
+ 'readme': True,
+ 'release_count': 0,
+ 'release_ver': None,
+ 'request_cnt': 2,
+ 'target': 'main_page'}
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler?page=1&per_page=100>
+{'create_date': '2018-07-10T02:07:26Z',
+ 'forks_count': 0,
+ 'github_id': 'tsfo1489',
+ 'language': 'Python',
+ 'license': None,
+ 'path': 'tsfo1489/Naver-Webtoon-Crawler',
+ 'proj_short_desc': '네이버 웹툰 크롤러',
+ 'repo_name': 'Naver-Webtoon-Crawler',
+ 'stargazers_count': 1,
+ 'update_date': '2020-06-08T15:21:01Z',
+ 'watchers': 0}
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ?page=1&per_page=100>
+{'create_date': '2018-07-02T08:27:22Z',
+ 'forks_count': 0,
+ 'github_id': 'tsfo1489',
+ 'language': 'C++',
+ 'license': None,
+ 'path': 'tsfo1489/BOJ',
+ 'proj_short_desc': 'BOJ 문제 풀이 모음',
+ 'repo_name': 'BOJ',
+ 'stargazers_count': 0,
+ 'update_date': '2018-07-06T02:02:19Z',
+ 'watchers': 0}
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/c0838e44876ebb0ffb2db0cce4baa2aa67a16fd4?page=1&per_page=100>
+{'additions': 2,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-24T15:15:59Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-24T15:15:59Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 10,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver_Movie_Crawler',
+ 'sha': 'c0838e44876ebb0ffb2db0cce4baa2aa67a16fd4'}
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/1dba5f8f8041a3cc59f36e565dbf92b677ebd11d?page=1&per_page=100>
+{'additions': 146539,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-24T08:57:02Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-24T08:57:02Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver_Movie_Crawler',
+ 'sha': '1dba5f8f8041a3cc59f36e565dbf92b677ebd11d'}
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2017-12-01&to=2017-12-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-01-01&to=2018-01-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2017-11-01&to=2017-11-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2018-01-01&to=2018-01-31>
+{'end_yymm': '2018-01-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2018-01-01'}
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100> (referer: https://github.com/tsfo1489/GitHub_Crawl)
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-12-01&to=2017-12-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2017-09-01&to=2017-09-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/019b20fdcf0b66a598a2e18912a6c573985bffc4?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits?page=1&per_page=100)
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2017-08-01&to=2017-08-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-12-01&to=2017-12-31>
+{'end_yymm': '2017-12-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2017-12-01'}
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-11-01&to=2017-11-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2017-10-01&to=2017-10-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/8bf999baf4addade6e925c4ef6f9294a3e38c42e?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits?page=1&per_page=100)
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/48d68be6189f145a028f7b825f7f5f41df54f2ed?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits?page=1&per_page=100)
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/ScrapyController/commits?page=1&per_page=100> (referer: https://github.com/tsfo1489/ScrapyController)
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-11-01&to=2017-11-30>
+{'end_yymm': '2017-11-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2017-11-01'}
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-09-01&to=2017-09-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/2f845eb37f2863c464115f97a84393c30175bc4d?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits?page=1&per_page=100)
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2017-07-01&to=2017-07-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/a835a31b63dde9eed743ba90178f2d396d5c2f9d?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits?page=1&per_page=100)
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-09-01&to=2017-09-30>
+{'end_yymm': '2017-09-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2017-09-01'}
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/019b20fdcf0b66a598a2e18912a6c573985bffc4?page=1&per_page=100>
+{'additions': 0,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-25T02:00:38Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-25T02:00:38Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 1,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver_Movie_Crawler',
+ 'sha': '019b20fdcf0b66a598a2e18912a6c573985bffc4'}
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-08-01&to=2017-08-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/NaverPy/commits?page=1&per_page=100> (referer: https://github.com/tsfo1489/NaverPy)
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-08-01&to=2017-08-31>
+{'end_yymm': '2017-08-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2017-08-01'}
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-10-01&to=2017-10-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/8bf999baf4addade6e925c4ef6f9294a3e38c42e?page=1&per_page=100>
+{'additions': 11,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-25T00:29:35Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-25T00:29:35Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 4,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver_Movie_Crawler',
+ 'sha': '8bf999baf4addade6e925c4ef6f9294a3e38c42e'}
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/48d68be6189f145a028f7b825f7f5f41df54f2ed?page=1&per_page=100>
+{'additions': 66,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-25T01:55:47Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-25T01:55:47Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 1,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver_Movie_Crawler',
+ 'sha': '48d68be6189f145a028f7b825f7f5f41df54f2ed'}
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-10-01&to=2017-10-31>
+{'end_yymm': '2017-10-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2017-10-01'}
+2021-10-29 00:49:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/2f845eb37f2863c464115f97a84393c30175bc4d?page=1&per_page=100>
+{'additions': 200235,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-24T14:17:54Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-24T14:17:54Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 7,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver_Movie_Crawler',
+ 'sha': '2f845eb37f2863c464115f97a84393c30175bc4d'}
+2021-10-29 00:49:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-07-01&to=2017-07-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/a835a31b63dde9eed743ba90178f2d396d5c2f9d?page=1&per_page=100>
+{'additions': 2,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-25T00:32:29Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-25T00:32:29Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver_Movie_Crawler',
+ 'sha': 'a835a31b63dde9eed743ba90178f2d396d5c2f9d'}
+2021-10-29 00:49:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2017-06-01&to=2017-06-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2017-05-01&to=2017-05-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-07-01&to=2017-07-31>
+{'end_yymm': '2017-07-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2017-07-01'}
+2021-10-29 00:49:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100> (referer: https://github.com/tsfo1489/WebApiPractice)
+2021-10-29 00:49:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/4b86765c5bc0ee8486df61904291bab2ee2a3ee2?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:49:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/78fb95443ba47d404251accb69ba38ada50e93c6?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:49:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2017-04-01&to=2017-04-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-06-01&to=2017-06-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-06-01&to=2017-06-30>
+{'end_yymm': '2017-06-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2017-06-01'}
+2021-10-29 00:49:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-05-01&to=2017-05-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/4b86765c5bc0ee8486df61904291bab2ee2a3ee2?page=1&per_page=100>
+{'additions': 55,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-08-31T13:03:28Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-08-31T13:03:28Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 188,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': '4b86765c5bc0ee8486df61904291bab2ee2a3ee2'}
+2021-10-29 00:49:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2017-03-01&to=2017-03-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/d01414080eda568312c43692d6daee4d35899eef?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:49:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-05-01&to=2017-05-31>
+{'end_yymm': '2017-05-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2017-05-01'}
+2021-10-29 00:49:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/78fb95443ba47d404251accb69ba38ada50e93c6?page=1&per_page=100>
+{'additions': 36,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-08-31T14:01:39Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-08-31T14:01:39Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': '78fb95443ba47d404251accb69ba38ada50e93c6'}
+2021-10-29 00:49:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-04-01&to=2017-04-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2017-01-01&to=2017-01-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2017-02-01&to=2017-02-28> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/f7e9fb85a3e3f781e3857da3faed7df9c2479202?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:49:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-04-01&to=2017-04-30>
+{'end_yymm': '2017-04-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2017-04-01'}
+2021-10-29 00:49:25 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://github.com/tsfo1489/OSSW_IoT> (failed 1 times): 429 Unknown Status
+2021-10-29 00:49:30 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://github.com/tsfo1489/Naver_Movie_Crawler/graphs/contributors-data> (failed 1 times): 429 Unknown Status
+2021-10-29 00:49:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/NaverPy/commits/150c9c1ca02061fa8964fc33796e8b6be36db4fc?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/NaverPy/commits?page=1&per_page=100)
+2021-10-29 00:49:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2016-12-01&to=2016-12-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/NaverPy/commits/33923a4f3aa3c699e6664ac491d102903c63165a?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/NaverPy/commits?page=1&per_page=100)
+2021-10-29 00:49:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/NaverPy/commits/d18166a9c266285a5d37973641c17a45555de767?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/NaverPy/commits?page=1&per_page=100)
+2021-10-29 00:49:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/NaverPy/commits/5be7a262248e4a3d4dfe4e6dad9779c0503c1c36?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/NaverPy/commits?page=1&per_page=100)
+2021-10-29 00:49:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/NaverPy/commits/3d0541782ccb6997101a4241f0b70a723f24e522?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/NaverPy/commits?page=1&per_page=100)
+2021-10-29 00:49:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/NaverPy/commits/7e63231007bdd237f2da0829a217185fa5e4da57?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/NaverPy/commits?page=1&per_page=100)
+2021-10-29 00:49:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2016-11-01&to=2016-11-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/3be25cc388aa88a332e893a39b013986a4c8de19?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:49:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2016-09-01&to=2016-09-30> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2016-10-01&to=2016-10-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/?tab=overview&from=2016-08-01&to=2016-08-31> (referer: https://api.github.com/users/tsfo1489?page=1&per_page=100)
+2021-10-29 00:49:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-03-01&to=2017-03-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/d01414080eda568312c43692d6daee4d35899eef?page=1&per_page=100>
+{'additions': 407,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-08-19T14:37:50Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-08-19T14:37:50Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': 'd01414080eda568312c43692d6daee4d35899eef'}
+2021-10-29 00:49:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-01-01&to=2017-01-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-02-01&to=2017-02-28>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:49:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/f7e9fb85a3e3f781e3857da3faed7df9c2479202?page=1&per_page=100>
+{'additions': 77,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-03T06:20:20Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-03T06:20:20Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 36,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': 'f7e9fb85a3e3f781e3857da3faed7df9c2479202'}
+2021-10-29 00:49:35 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://github.com/tsfo1489/Naver_Movie_Crawler/pulls> (failed 1 times): 429 Unknown Status
+2021-10-29 00:49:40 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://github.com/tsfo1489/Naver_Movie_Crawler/issues> (failed 1 times): 429 Unknown Status
+2021-10-29 00:49:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/e63b2b54decd0c0daf34256561ab97058a061c5a?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:49:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-03-01&to=2017-03-31>
+{'end_yymm': '2017-03-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2017-03-01'}
+2021-10-29 00:49:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-01-01&to=2017-01-31>
+{'end_yymm': '2017-01-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2017-01-01'}
+2021-10-29 00:49:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2017-02-01&to=2017-02-28>
+{'end_yymm': '2017-02-28',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2017-02-01'}
+2021-10-29 00:49:45 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://github.com/tsfo1489/GitHub_Crawl/graphs/contributors-data> (failed 1 times): 429 Unknown Status
+2021-10-29 00:49:50 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://github.com/tsfo1489/GitHub_Crawl/issues> (failed 1 times): 429 Unknown Status
+2021-10-29 00:49:55 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://github.com/tsfo1489/GitHub_Crawl/pulls> (failed 1 times): 429 Unknown Status
+2021-10-29 00:50:00 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://github.com/tsfo1489/ScrapyController/graphs/contributors-data> (failed 1 times): 429 Unknown Status
+2021-10-29 00:50:05 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://github.com/tsfo1489/BOJ> (failed 1 times): 429 Unknown Status
+2021-10-29 00:50:10 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://github.com/tsfo1489/NaverPy/graphs/contributors-data> (failed 1 times): 429 Unknown Status
+2021-10-29 00:50:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/NaverPy/commits/150c9c1ca02061fa8964fc33796e8b6be36db4fc?page=1&per_page=100>
+{'additions': 31,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-07-02T07:31:13Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-07-02T07:31:13Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 5,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'NaverPy',
+ 'sha': '150c9c1ca02061fa8964fc33796e8b6be36db4fc'}
+2021-10-29 00:50:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2016-12-01&to=2016-12-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:50:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/NaverPy/commits/33923a4f3aa3c699e6664ac491d102903c63165a?page=1&per_page=100>
+{'additions': 2,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-07-01T00:16:35Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-07-01T00:16:35Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'NaverPy',
+ 'sha': '33923a4f3aa3c699e6664ac491d102903c63165a'}
+2021-10-29 00:50:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/NaverPy/commits/d18166a9c266285a5d37973641c17a45555de767?page=1&per_page=100>
+{'additions': 280,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-07-01T00:08:36Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-07-01T00:08:36Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'NaverPy',
+ 'sha': 'd18166a9c266285a5d37973641c17a45555de767'}
+2021-10-29 00:50:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/NaverPy/commits/5be7a262248e4a3d4dfe4e6dad9779c0503c1c36?page=1&per_page=100>
+{'additions': 1,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-07-02T08:41:50Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-07-02T08:41:50Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'NaverPy',
+ 'sha': '5be7a262248e4a3d4dfe4e6dad9779c0503c1c36'}
+2021-10-29 00:50:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/NaverPy/commits/3d0541782ccb6997101a4241f0b70a723f24e522?page=1&per_page=100>
+{'additions': 21,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-07-01T01:58:59Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-07-01T01:58:59Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 1,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'NaverPy',
+ 'sha': '3d0541782ccb6997101a4241f0b70a723f24e522'}
+2021-10-29 00:50:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/NaverPy/commits/7e63231007bdd237f2da0829a217185fa5e4da57?page=1&per_page=100>
+{'additions': 32,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-07-02T08:39:26Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-07-02T08:39:26Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 8,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'NaverPy',
+ 'sha': '7e63231007bdd237f2da0829a217185fa5e4da57'}
+2021-10-29 00:50:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2016-11-01&to=2016-11-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:50:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/3be25cc388aa88a332e893a39b013986a4c8de19?page=1&per_page=100>
+{'additions': 14,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-28T04:44:32Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-28T04:44:32Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': '3be25cc388aa88a332e893a39b013986a4c8de19'}
+2021-10-29 00:50:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2016-09-01&to=2016-09-30>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:50:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2016-10-01&to=2016-10-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:50:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2016-08-01&to=2016-08-31>
+{'github_id': 'tsfo1489',
+ 'target': 'activity',
+ 'total_PRs': 0,
+ 'total_commits': 0,
+ 'total_issues': 0}
+2021-10-29 00:50:16 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://github.com/tsfo1489/NaverPy/issues> (failed 1 times): 429 Unknown Status
+2021-10-29 00:50:21 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://github.com/tsfo1489/NaverPy/pulls> (failed 1 times): 429 Unknown Status
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/2b5f85b637d831b9ce2d06b7110ba6da60081d0f?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/9dcaba86b730c83c5527f272921bf107e034efb5?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/fbda93766cf2d2744b8ae0bd773efe8e707fa01b?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/f1b2079b7f5c9a933a7b92dc468fb64ac7515693?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/50cd902dfedab810a8a819be249f57093b00787e?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/e8853f216864d9a3983e617bad56f72b08203da6?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/b09a399cb303c7dcd36dcdc5ee02cdf28c145be2?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2016-12-01&to=2016-12-31>
+{'end_yymm': '2016-12-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2016-12-01'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/e63b2b54decd0c0daf34256561ab97058a061c5a?page=1&per_page=100>
+{'additions': 19,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-28T07:06:02Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-28T07:06:02Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 8,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': 'e63b2b54decd0c0daf34256561ab97058a061c5a'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2016-11-01&to=2016-11-30>
+{'end_yymm': '2016-11-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2016-11-01'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2016-09-01&to=2016-09-30>
+{'end_yymm': '2016-09-30',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2016-09-01'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2016-10-01&to=2016-10-31>
+{'end_yymm': '2016-10-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2016-10-01'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/?tab=overview&from=2016-08-01&to=2016-08-31>
+{'end_yymm': '2016-08-31',
+ 'github_id': 'tsfo1489',
+ 'num_of_PRs': 0,
+ 'num_of_co_repos': 0,
+ 'num_of_commits': 0,
+ 'num_of_cr_repos': 0,
+ 'num_of_issues': 0,
+ 'stars': 0,
+ 'start_yymm': '2016-08-01'}
+2021-10-29 00:50:21 [scrapy.extensions.logstats] INFO: Crawled 112 pages (at 112 pages/min), scraped 175 items (at 175 items/min)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/200eba6a0fba29595f9e0a59134c20be635c55fc?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/2b5f85b637d831b9ce2d06b7110ba6da60081d0f?page=1&per_page=100>
+{'additions': 1,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-28T07:18:28Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-28T07:18:28Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 1,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': '2b5f85b637d831b9ce2d06b7110ba6da60081d0f'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/9dcaba86b730c83c5527f272921bf107e034efb5?page=1&per_page=100>
+{'additions': 1,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-28T07:18:53Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-28T07:18:53Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 1,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': '9dcaba86b730c83c5527f272921bf107e034efb5'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/fbda93766cf2d2744b8ae0bd773efe8e707fa01b?page=1&per_page=100>
+{'additions': 76,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-29T02:25:33Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-29T02:25:33Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 6,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': 'fbda93766cf2d2744b8ae0bd773efe8e707fa01b'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/f1b2079b7f5c9a933a7b92dc468fb64ac7515693?page=1&per_page=100>
+{'additions': 11,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-28T08:01:21Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-28T08:01:21Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 1,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': 'f1b2079b7f5c9a933a7b92dc468fb64ac7515693'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/50cd902dfedab810a8a819be249f57093b00787e?page=1&per_page=100>
+{'additions': 20,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-28T08:37:33Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-28T08:37:33Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 4,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': '50cd902dfedab810a8a819be249f57093b00787e'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/e8853f216864d9a3983e617bad56f72b08203da6?page=1&per_page=100>
+{'additions': 3,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-28T07:32:58Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-28T07:32:58Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 2,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': 'e8853f216864d9a3983e617bad56f72b08203da6'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/b09a399cb303c7dcd36dcdc5ee02cdf28c145be2?page=1&per_page=100>
+{'additions': 0,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-28T08:38:03Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-28T08:38:03Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 1,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': 'b09a399cb303c7dcd36dcdc5ee02cdf28c145be2'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/200eba6a0fba29595f9e0a59134c20be635c55fc?page=1&per_page=100>
+{'additions': 0,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-29T02:26:20Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-29T02:26:20Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 8,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': '200eba6a0fba29595f9e0a59134c20be635c55fc'}
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/db90f225c79370ae441409fd8781c580d16979a4?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/571470bb2cc540888b5383b74c38afd8ac012853?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/db73dd319d3c720966a8f80c804d7f484fed944e?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/ffb4d9ef782e501860076041d407305ef0acdc53?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/f33a04bf3d3b0c7315d735b62813b43fe5ec979a?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/75c09392e46bace65c924ce90691af1a261feee5?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/WebApiPractice/graphs/contributors-data> (referer: https://github.com/tsfo1489/WebApiPractice)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/ScrapyController/pulls> (referer: https://github.com/tsfo1489/ScrapyController)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/cab5d132bd7248294acdd71cecf7128e31621411?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/ScrapyController/issues> (referer: https://github.com/tsfo1489/ScrapyController)
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/db90f225c79370ae441409fd8781c580d16979a4?page=1&per_page=100>
+{'additions': 78,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-30T01:14:41Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-30T01:14:41Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 7,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': 'db90f225c79370ae441409fd8781c580d16979a4'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/571470bb2cc540888b5383b74c38afd8ac012853?page=1&per_page=100>
+{'additions': 32,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-30T01:35:32Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-30T01:35:32Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 64,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': '571470bb2cc540888b5383b74c38afd8ac012853'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/db73dd319d3c720966a8f80c804d7f484fed944e?page=1&per_page=100>
+{'additions': 45,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-29T03:24:29Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-29T03:24:29Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': 'db73dd319d3c720966a8f80c804d7f484fed944e'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/ffb4d9ef782e501860076041d407305ef0acdc53?page=1&per_page=100>
+{'additions': 30,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-30T01:50:13Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-30T01:50:13Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 19,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': 'ffb4d9ef782e501860076041d407305ef0acdc53'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/f33a04bf3d3b0c7315d735b62813b43fe5ec979a?page=1&per_page=100>
+{'additions': 0,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-29T09:14:45Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-29T09:14:45Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 184,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': 'f33a04bf3d3b0c7315d735b62813b43fe5ec979a'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/75c09392e46bace65c924ce90691af1a261feee5?page=1&per_page=100>
+{'additions': 203,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-29T08:59:29Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-29T08:59:29Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 5,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': '75c09392e46bace65c924ce90691af1a261feee5'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/ScrapyController/pulls>
+{'path': 'tsfo1489/ScrapyController', 'prs_count': 0, 'target': 'pr'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/cab5d132bd7248294acdd71cecf7128e31621411?page=1&per_page=100>
+{'additions': 62,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-29T08:18:24Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-29T08:18:24Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 7,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': 'cab5d132bd7248294acdd71cecf7128e31621411'}
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/ScrapyController/issues>
+{'close_issue_count': 0,
+ 'open_issue_count': 0,
+ 'path': 'tsfo1489/ScrapyController',
+ 'target': 'issue'}
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/Naver-Webtoon-Crawler> (referer: https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/301136babe448ca62333644165e5d3f439d241dc?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/c768b1aecda5deef296e24ee78efa8ce06080bae?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/1c99287177bc94f494daa1ff6ed22debed62cf41?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/7f2309cd6a7d5dc5ebc53370d301e6a3d74353dd?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/6dd7febcdb434921095f9ec09aef9eca729b9e2f?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/Naver-Webtoon-Crawler>
+{'commits_count': 17,
+ 'contributors': 1,
+ 'path': 'tsfo1489/Naver-Webtoon-Crawler',
+ 'readme': True,
+ 'release_count': 0,
+ 'release_ver': None,
+ 'request_cnt': 2,
+ 'target': 'main_page'}
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/4402fd740b0d61f5cec18ecaaf0a639002138508?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/4afebf9dcd79285a04ff20dec067ab717f4d1d48?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/301136babe448ca62333644165e5d3f439d241dc?page=1&per_page=100>
+{'additions': 13,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-29T08:36:05Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-29T08:36:05Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 6,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': '301136babe448ca62333644165e5d3f439d241dc'}
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/c768b1aecda5deef296e24ee78efa8ce06080bae?page=1&per_page=100>
+{'additions': 7,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-30T05:17:42Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-30T05:17:42Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 5,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': 'c768b1aecda5deef296e24ee78efa8ce06080bae'}
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/1c99287177bc94f494daa1ff6ed22debed62cf41?page=1&per_page=100>
+{'additions': 2,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-30T05:34:44Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-30T05:34:44Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 1,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': '1c99287177bc94f494daa1ff6ed22debed62cf41'}
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/7f2309cd6a7d5dc5ebc53370d301e6a3d74353dd?page=1&per_page=100>
+{'additions': 10,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-30T02:08:45Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-30T02:08:45Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 58,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': '7f2309cd6a7d5dc5ebc53370d301e6a3d74353dd'}
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/6dd7febcdb434921095f9ec09aef9eca729b9e2f?page=1&per_page=100>
+{'additions': 98,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-30T05:12:52Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-30T05:12:52Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 5,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': '6dd7febcdb434921095f9ec09aef9eca729b9e2f'}
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/568c90c5209df38cb2c6353eaf88fa6ee0dc44db?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/4402fd740b0d61f5cec18ecaaf0a639002138508?page=1&per_page=100>
+{'additions': 0,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-30T05:35:20Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2021-06-30T05:35:20Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 25,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': '4402fd740b0d61f5cec18ecaaf0a639002138508'}
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/4afebf9dcd79285a04ff20dec067ab717f4d1d48?page=1&per_page=100>
+{'additions': 11,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-30T05:26:04Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-30T05:26:04Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 4,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': '4afebf9dcd79285a04ff20dec067ab717f4d1d48'}
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/ScrapyController/commits/bd34691f70054a4ae28f1256a757637ef5249ce3?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/ScrapyController/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/ScrapyController/commits/5bf93d5ebc09586cd0c3c902a2c399bb58047da2?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/ScrapyController/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/d318ed6aa2614a8ad6b892a304d509d903480e31?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/568c90c5209df38cb2c6353eaf88fa6ee0dc44db?page=1&per_page=100>
+{'additions': 106,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-30T07:03:40Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-30T07:03:40Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 15,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': '568c90c5209df38cb2c6353eaf88fa6ee0dc44db'}
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/WebApiPractice/commits/1609c89085775a97131918120cd92221dbb2e635?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/WebApiPractice/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/ScrapyController/commits/bd34691f70054a4ae28f1256a757637ef5249ce3?page=1&per_page=100>
+{'additions': 25,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-14T09:08:19Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-14T09:08:19Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'ScrapyController',
+ 'sha': 'bd34691f70054a4ae28f1256a757637ef5249ce3'}
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/ScrapyController/commits/5bf93d5ebc09586cd0c3c902a2c399bb58047da2?page=1&per_page=100>
+{'additions': 0,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-14T09:14:10Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-14T09:14:10Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'ScrapyController',
+ 'sha': '5bf93d5ebc09586cd0c3c902a2c399bb58047da2'}
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/d318ed6aa2614a8ad6b892a304d509d903480e31?page=1&per_page=100>
+{'additions': 23,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-30T08:11:24Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-30T08:11:24Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 2,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': 'd318ed6aa2614a8ad6b892a304d509d903480e31'}
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/ScrapyController/commits/413dcb909aa83f2ccd3c400fe4e3bbc36e939b04?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/ScrapyController/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/ScrapyController/commits/f3664f5a35b66541447f4af8a9d3a7a70608a70c?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/ScrapyController/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/ScrapyController/commits/e130765f6a5b4a15a9ff546c98d5a007ab3b2723?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/ScrapyController/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/ScrapyController/commits/602947496d45d7b2ff6bb74b2bd574e6613eae32?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/ScrapyController/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/Naver-Webtoon-Crawler/graphs/contributors-data> (referer: https://github.com/tsfo1489/Naver-Webtoon-Crawler)
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/WebApiPractice/commits/1609c89085775a97131918120cd92221dbb2e635?page=1&per_page=100>
+{'additions': 22,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-30T05:34:02Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-30T05:34:02Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 13,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'WebApiPractice',
+ 'sha': '1609c89085775a97131918120cd92221dbb2e635'}
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/ScrapyController/commits/413dcb909aa83f2ccd3c400fe4e3bbc36e939b04?page=1&per_page=100>
+{'additions': 28,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-10-28T13:14:45Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-10-28T13:14:45Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 16,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'ScrapyController',
+ 'sha': '413dcb909aa83f2ccd3c400fe4e3bbc36e939b04'}
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/Naver-Webtoon-Crawler/issues> (referer: https://github.com/tsfo1489/Naver-Webtoon-Crawler)
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/ScrapyController/commits/f3664f5a35b66541447f4af8a9d3a7a70608a70c?page=1&per_page=100>
+{'additions': 40,
+ 'author': '34018997+BIGDannyK@users.noreply.github.com',
+ 'author_date': '2021-09-26T02:36:14Z',
+ 'author_github': 'BIGDannyK',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2021-09-26T02:36:14Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'ScrapyController',
+ 'sha': 'f3664f5a35b66541447f4af8a9d3a7a70608a70c'}
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/ScrapyController/commits/e130765f6a5b4a15a9ff546c98d5a007ab3b2723?page=1&per_page=100>
+{'additions': 8,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-10-28T15:33:59Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-10-28T15:33:59Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 9,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'ScrapyController',
+ 'sha': 'e130765f6a5b4a15a9ff546c98d5a007ab3b2723'}
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/ScrapyController/commits/602947496d45d7b2ff6bb74b2bd574e6613eae32?page=1&per_page=100>
+{'additions': 13,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-26T15:16:31Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-26T15:16:31Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 30,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'ScrapyController',
+ 'sha': '602947496d45d7b2ff6bb74b2bd574e6613eae32'}
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/3d5dffd66bbdf875112670ebd2b721553ec29e9e?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/Naver-Webtoon-Crawler/pulls> (referer: https://github.com/tsfo1489/Naver-Webtoon-Crawler)
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/3f5adc7e4079cb020b039d76f202cda42d231042?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/Naver-Webtoon-Crawler/issues>
+{'close_issue_count': 0,
+ 'open_issue_count': 0,
+ 'path': 'tsfo1489/Naver-Webtoon-Crawler',
+ 'target': 'issue'}
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/2a57a225fb77836fd374da524b99b196a2252b0d?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/15c41352da10cec71d5cf68f81730eda95b2adc8?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/eb2418c7cc32cefaad825a0c29dcfd6ecde9e165?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/9422622d38953b918e553da7f4d86485c5913906?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/2b3dd8ba395c34590e0ee1bdefa29c09814adca1?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/3d5dffd66bbdf875112670ebd2b721553ec29e9e?page=1&per_page=100>
+{'additions': 17,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-03T06:29:49Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-03T06:29:49Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 1,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': '3d5dffd66bbdf875112670ebd2b721553ec29e9e'}
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/Naver-Webtoon-Crawler/pulls>
+{'path': 'tsfo1489/Naver-Webtoon-Crawler', 'prs_count': 0, 'target': 'pr'}
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/f850fb9159ace9835d0288d1979c06c143b67412?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/3f5adc7e4079cb020b039d76f202cda42d231042?page=1&per_page=100>
+{'additions': 5,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-04T15:10:10Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-04T15:10:10Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 2,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': '3f5adc7e4079cb020b039d76f202cda42d231042'}
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/2a57a225fb77836fd374da524b99b196a2252b0d?page=1&per_page=100>
+{'additions': 16,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-04T15:25:51Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-04T15:25:51Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': '2a57a225fb77836fd374da524b99b196a2252b0d'}
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/WebApiPractice/issues> (referer: https://github.com/tsfo1489/WebApiPractice)
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/WebApiPractice/pulls> (referer: https://github.com/tsfo1489/WebApiPractice)
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/15c41352da10cec71d5cf68f81730eda95b2adc8?page=1&per_page=100>
+{'additions': 12,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-04T15:07:02Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-04T15:07:02Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 1,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': '15c41352da10cec71d5cf68f81730eda95b2adc8'}
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/eb2418c7cc32cefaad825a0c29dcfd6ecde9e165?page=1&per_page=100>
+{'additions': 1,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-04T15:30:57Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-04T15:30:57Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 1,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': 'eb2418c7cc32cefaad825a0c29dcfd6ecde9e165'}
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/9422622d38953b918e553da7f4d86485c5913906?page=1&per_page=100>
+{'additions': 77,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-03T06:21:48Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2021-09-03T06:21:48Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 36,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': '9422622d38953b918e553da7f4d86485c5913906'}
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/2b3dd8ba395c34590e0ee1bdefa29c09814adca1?page=1&per_page=100>
+{'additions': 1,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-04T15:30:33Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-04T15:30:33Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 1,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': '2b3dd8ba395c34590e0ee1bdefa29c09814adca1'}
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/f850fb9159ace9835d0288d1979c06c143b67412?page=1&per_page=100>
+{'additions': 5,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-04T15:26:32Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-04T15:26:32Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 2,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': 'f850fb9159ace9835d0288d1979c06c143b67412'}
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/WebApiPractice/issues>
+{'close_issue_count': 0,
+ 'open_issue_count': 0,
+ 'path': 'tsfo1489/WebApiPractice',
+ 'target': 'issue'}
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/b8682ffb977a5c7867c65f8da082768dd6ccd8c9?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/WebApiPractice/pulls>
+{'path': 'tsfo1489/WebApiPractice', 'prs_count': 0, 'target': 'pr'}
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/a29df0d63658d1dcf0ea5ac541924c0654697eca?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/df398fe5be5bbf3a44b27a459366e76b0eb6fce7?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/e6dee6fb1fa811e3d96b38019386e9a4da2219e1?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/W2V/issues> (referer: https://github.com/tsfo1489/W2V)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/168bcb662f41fa7a27fe378b3e3a9f5e87a9aa1f?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/dbfbc44efde7d8eba6d8cd3e8c08bbffd9bebeee?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/W2V/graphs/contributors-data> (referer: https://github.com/tsfo1489/W2V)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/W2V/pulls> (referer: https://github.com/tsfo1489/W2V)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/519ac8618953ff3d8536cfa6d0d7da1c0fe67a3c?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/b8682ffb977a5c7867c65f8da082768dd6ccd8c9?page=1&per_page=100>
+{'additions': 44,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-04T15:32:32Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2021-09-04T15:32:32Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 1,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': 'b8682ffb977a5c7867c65f8da082768dd6ccd8c9'}
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/NaverPy/graphs/contributors-data> (referer: https://github.com/tsfo1489/NaverPy)
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/a29df0d63658d1dcf0ea5ac541924c0654697eca?page=1&per_page=100>
+{'additions': 58,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-15T04:50:19Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-15T04:50:19Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 2,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': 'a29df0d63658d1dcf0ea5ac541924c0654697eca'}
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/df398fe5be5bbf3a44b27a459366e76b0eb6fce7?page=1&per_page=100>
+{'additions': 104,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-15T04:51:03Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2021-09-15T04:51:03Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 1,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': 'df398fe5be5bbf3a44b27a459366e76b0eb6fce7'}
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/e6dee6fb1fa811e3d96b38019386e9a4da2219e1?page=1&per_page=100>
+{'additions': 13,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-09T08:13:06Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-09T08:13:06Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 9,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': 'e6dee6fb1fa811e3d96b38019386e9a4da2219e1'}
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/W2V/issues>
+{'close_issue_count': 0,
+ 'open_issue_count': 0,
+ 'path': 'tsfo1489/W2V',
+ 'target': 'issue'}
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/168bcb662f41fa7a27fe378b3e3a9f5e87a9aa1f?page=1&per_page=100>
+{'additions': 48,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-10T01:45:07Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-10T01:45:07Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 1,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': '168bcb662f41fa7a27fe378b3e3a9f5e87a9aa1f'}
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/dbfbc44efde7d8eba6d8cd3e8c08bbffd9bebeee?page=1&per_page=100>
+{'additions': 10,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-10T02:15:30Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-10T02:15:30Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 2,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': 'dbfbc44efde7d8eba6d8cd3e8c08bbffd9bebeee'}
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/W2V/pulls>
+{'path': 'tsfo1489/W2V', 'prs_count': 0, 'target': 'pr'}
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/519ac8618953ff3d8536cfa6d0d7da1c0fe67a3c?page=1&per_page=100>
+{'additions': 27,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-20T15:37:01Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-20T15:37:01Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 2,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': '519ac8618953ff3d8536cfa6d0d7da1c0fe67a3c'}
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/77e73f2b8556d0a450574b8aca7222caf071f5fe?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/NaverPy/pulls> (referer: https://github.com/tsfo1489/NaverPy)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/5cc43de99f4c09e208ea721150da9307c71f77cf?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/BOJ> (referer: https://api.github.com/repos/tsfo1489/BOJ?page=1&per_page=100)
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/77e73f2b8556d0a450574b8aca7222caf071f5fe?page=1&per_page=100>
+{'additions': 27,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-20T15:37:26Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2021-09-20T15:37:26Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 2,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': '77e73f2b8556d0a450574b8aca7222caf071f5fe'}
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/ScrapyController/graphs/contributors-data> (referer: https://github.com/tsfo1489/ScrapyController)
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/NaverPy/pulls>
+{'path': 'tsfo1489/NaverPy', 'prs_count': 0, 'target': 'pr'}
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/40860a1772750fb1d29f10503a53876a5693cd2f?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/62de6a12bef9af410ff5cbe58b201174823ae74e?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/5cc43de99f4c09e208ea721150da9307c71f77cf?page=1&per_page=100>
+{'additions': 35,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-22T13:16:15Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-22T13:16:15Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 22,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': '5cc43de99f4c09e208ea721150da9307c71f77cf'}
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/NaverPy/issues> (referer: https://github.com/tsfo1489/NaverPy)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/ba02e4461e68cf8476947750dee01d31d4e0281e?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/ad72db7bcd302f1fd399487cc288fd09194ce734?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/GitHub_Crawl/pulls> (referer: https://github.com/tsfo1489/GitHub_Crawl)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/GitHub_Crawl/graphs/contributors-data> (referer: https://github.com/tsfo1489/GitHub_Crawl)
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/BOJ>
+{'commits_count': 22,
+ 'contributors': 1,
+ 'path': 'tsfo1489/BOJ',
+ 'readme': True,
+ 'release_count': 0,
+ 'release_ver': None,
+ 'request_cnt': 2,
+ 'target': 'main_page'}
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/40860a1772750fb1d29f10503a53876a5693cd2f?page=1&per_page=100>
+{'additions': 3,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-29T08:42:12Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-29T08:42:12Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 6,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': '40860a1772750fb1d29f10503a53876a5693cd2f'}
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/62de6a12bef9af410ff5cbe58b201174823ae74e?page=1&per_page=100>
+{'additions': 6,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-29T15:16:29Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-29T15:16:29Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 5,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': '62de6a12bef9af410ff5cbe58b201174823ae74e'}
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits?page=1&per_page=100> (referer: https://github.com/tsfo1489/Naver-Webtoon-Crawler)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/Naver_Movie_Crawler/issues> (referer: https://github.com/tsfo1489/Naver_Movie_Crawler)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/2476cb9a17f496d8587105c7b88bf234893c6516?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/4e97b0aba2fee1f29973c453177621399a6cc9d2?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/GitHub_Crawl/issues> (referer: https://github.com/tsfo1489/GitHub_Crawl)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/40c446c011887f77dc585cfbcc7d00fbde25bb54?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/NaverPy/issues>
+{'close_issue_count': 0,
+ 'open_issue_count': 0,
+ 'path': 'tsfo1489/NaverPy',
+ 'target': 'issue'}
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/ba02e4461e68cf8476947750dee01d31d4e0281e?page=1&per_page=100>
+{'additions': 74,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-28T08:54:00Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-28T08:54:00Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 4,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': 'ba02e4461e68cf8476947750dee01d31d4e0281e'}
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/ad72db7bcd302f1fd399487cc288fd09194ce734?page=1&per_page=100>
+{'additions': 28,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-29T15:11:10Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-29T15:11:10Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 12,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': 'ad72db7bcd302f1fd399487cc288fd09194ce734'}
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/GitHub_Crawl/pulls>
+{'path': 'tsfo1489/GitHub_Crawl', 'prs_count': 5, 'target': 'pr'}
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/Naver_Movie_Crawler/pulls> (referer: https://github.com/tsfo1489/Naver_Movie_Crawler)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/Naver_Movie_Crawler/graphs/contributors-data> (referer: https://github.com/tsfo1489/Naver_Movie_Crawler)
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/Naver_Movie_Crawler/issues>
+{'close_issue_count': 0,
+ 'open_issue_count': 0,
+ 'path': 'tsfo1489/Naver_Movie_Crawler',
+ 'target': 'issue'}
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/W2V/commits?page=1&per_page=100> (referer: https://github.com/tsfo1489/W2V)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/e2a123196dff96a09dd73a6655dd0401c63646c2?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/0f86e8a08a854001efe64b58005af46b151f83fc?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/792d373a9de8cd78cf2e6370ee0d51745182eff4?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits?page=1&per_page=100)
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/2476cb9a17f496d8587105c7b88bf234893c6516?page=1&per_page=100>
+{'additions': 74,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-28T08:54:55Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2021-09-28T08:54:55Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 4,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': '2476cb9a17f496d8587105c7b88bf234893c6516'}
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/4e97b0aba2fee1f29973c453177621399a6cc9d2?page=1&per_page=100>
+{'additions': 6,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-09-29T15:46:57Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-09-29T15:46:57Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 5,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': '4e97b0aba2fee1f29973c453177621399a6cc9d2'}
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/GitHub_Crawl/issues>
+{'close_issue_count': 6,
+ 'open_issue_count': 1,
+ 'path': 'tsfo1489/GitHub_Crawl',
+ 'target': 'issue'}
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/40c446c011887f77dc585cfbcc7d00fbde25bb54?page=1&per_page=100>
+{'additions': 2,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-10-01T05:03:24Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-10-01T05:03:24Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 1,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': '40c446c011887f77dc585cfbcc7d00fbde25bb54'}
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/Naver_Movie_Crawler/pulls>
+{'path': 'tsfo1489/Naver_Movie_Crawler', 'prs_count': 0, 'target': 'pr'}
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/BOJ/graphs/contributors-data> (referer: https://github.com/tsfo1489/BOJ)
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/e2a123196dff96a09dd73a6655dd0401c63646c2?page=1&per_page=100>
+{'additions': 2,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-10-01T11:32:33Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-10-01T11:32:33Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': 'e2a123196dff96a09dd73a6655dd0401c63646c2'}
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/0f86e8a08a854001efe64b58005af46b151f83fc?page=1&per_page=100>
+{'additions': 17,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-10-01T05:22:13Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-10-01T05:22:13Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 6,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': '0f86e8a08a854001efe64b58005af46b151f83fc'}
+2021-10-29 00:50:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/GitHub_Crawl/commits/792d373a9de8cd78cf2e6370ee0d51745182eff4?page=1&per_page=100>
+{'additions': 10,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-10-01T11:40:38Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-10-01T11:40:38Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 2,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'GitHub_Crawl',
+ 'sha': '792d373a9de8cd78cf2e6370ee0d51745182eff4'}
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/c2f878022764660b7a45b45c273b4c46c8e29203?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/BOJ/pulls> (referer: https://github.com/tsfo1489/BOJ)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/BOJ/issues> (referer: https://github.com/tsfo1489/BOJ)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/OSSW_IoT> (referer: https://api.github.com/repos/tsfo1489/OSSW_IoT?page=1&per_page=100)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/1e4964413851b5938e514940bf09ca815504c199?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/5f8c791cdd535ad7c841c4b277f0699f17819153?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/aac6c98ad73a3759f847a7258ca45db1439be7e7?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/c2f878022764660b7a45b45c273b4c46c8e29203?page=1&per_page=100>
+{'additions': 200872,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-25T03:18:57Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-25T03:18:57Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 20,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver_Movie_Crawler',
+ 'sha': 'c2f878022764660b7a45b45c273b4c46c8e29203'}
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/BOJ/pulls>
+{'path': 'tsfo1489/BOJ', 'prs_count': 0, 'target': 'pr'}
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/BOJ/issues>
+{'close_issue_count': 0,
+ 'open_issue_count': 0,
+ 'path': 'tsfo1489/BOJ',
+ 'target': 'issue'}
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/OSSW_IoT>
+{'commits_count': 14,
+ 'contributors': 1,
+ 'path': 'tsfo1489/OSSW_IoT',
+ 'readme': True,
+ 'release_count': 0,
+ 'release_ver': None,
+ 'request_cnt': 2,
+ 'target': 'main_page'}
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/1e4964413851b5938e514940bf09ca815504c199?page=1&per_page=100>
+{'additions': 1,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-25T03:29:53Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-25T03:29:53Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 1,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver_Movie_Crawler',
+ 'sha': '1e4964413851b5938e514940bf09ca815504c199'}
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/e7e51b7c3e251724453343a47896f0a36197c0fb?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100> (referer: https://github.com/tsfo1489/BOJ)
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/8dcb87a572e5fb2251c13f4adf65506b0aa1231d?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/e46428d725ac5e735128ae549db3811abee335a2?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/5f8c791cdd535ad7c841c4b277f0699f17819153?page=1&per_page=100>
+{'additions': 2,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-25T03:27:39Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-25T03:27:39Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver_Movie_Crawler',
+ 'sha': '5f8c791cdd535ad7c841c4b277f0699f17819153'}
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver_Movie_Crawler/commits/aac6c98ad73a3759f847a7258ca45db1439be7e7?page=1&per_page=100>
+{'additions': 29,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-25T05:58:18Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-25T05:58:18Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 146113,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver_Movie_Crawler',
+ 'sha': 'aac6c98ad73a3759f847a7258ca45db1439be7e7'}
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/8369f565f4f84e3a88d8c32d29649c02c8619a28?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/e7e51b7c3e251724453343a47896f0a36197c0fb?page=1&per_page=100>
+{'additions': 6,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-10T02:07:08Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-10T02:07:08Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 6,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver-Webtoon-Crawler',
+ 'sha': 'e7e51b7c3e251724453343a47896f0a36197c0fb'}
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/26874eb726c34077b54adc64a8b259b36cc39257?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/c52f50bd16d9f02791d20a4a8dd0046e5f33e46f?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/8dcb87a572e5fb2251c13f4adf65506b0aa1231d?page=1&per_page=100>
+{'additions': 2,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-10T01:37:32Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-10T01:37:32Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver-Webtoon-Crawler',
+ 'sha': '8dcb87a572e5fb2251c13f4adf65506b0aa1231d'}
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/e46428d725ac5e735128ae549db3811abee335a2?page=1&per_page=100>
+{'additions': 83,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-10T01:54:45Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-10T01:54:45Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver-Webtoon-Crawler',
+ 'sha': 'e46428d725ac5e735128ae549db3811abee335a2'}
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/320af60c7828220164b7c1a30c7da9263848258e?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/8369f565f4f84e3a88d8c32d29649c02c8619a28?page=1&per_page=100>
+{'additions': 0,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-10T02:07:52Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-10T02:07:52Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver-Webtoon-Crawler',
+ 'sha': '8369f565f4f84e3a88d8c32d29649c02c8619a28'}
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/26874eb726c34077b54adc64a8b259b36cc39257?page=1&per_page=100>
+{'additions': 12,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-10T02:41:10Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-10T02:41:10Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 4,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver-Webtoon-Crawler',
+ 'sha': '26874eb726c34077b54adc64a8b259b36cc39257'}
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/c52f50bd16d9f02791d20a4a8dd0046e5f33e46f?page=1&per_page=100>
+{'additions': 1,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-10T02:10:19Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-10T02:10:19Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 1,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver-Webtoon-Crawler',
+ 'sha': 'c52f50bd16d9f02791d20a4a8dd0046e5f33e46f'}
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/320af60c7828220164b7c1a30c7da9263848258e?page=1&per_page=100>
+{'additions': 39,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-10T04:07:01Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-10T04:07:01Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 37,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver-Webtoon-Crawler',
+ 'sha': '320af60c7828220164b7c1a30c7da9263848258e'}
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/ce02cf07a0755b000bb7fab96eb22bf6c51c0fe7?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/76ddd7433b17659b3fcd503e48093baf1f04b317?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/b4b5a5aece8dd992c99b8ae4fcdce22818b09b9f?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/81ffe8f30cf2616545b1050467cd12e9bbf849c6?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/a27bab5af854935a2c2560637964d5775e04d6e6?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/OSSW_IoT/issues> (referer: https://github.com/tsfo1489/OSSW_IoT)
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/ce02cf07a0755b000bb7fab96eb22bf6c51c0fe7?page=1&per_page=100>
+{'additions': 0,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-10T05:04:30Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-10T05:04:30Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 2,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver-Webtoon-Crawler',
+ 'sha': 'ce02cf07a0755b000bb7fab96eb22bf6c51c0fe7'}
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/b25886cec0ad46972ceab801a1d811a1e6ddcb4e?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/OSSW_IoT/graphs/contributors-data> (referer: https://github.com/tsfo1489/OSSW_IoT)
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/aecaca97826278715109f1c64d9da07c94e0f3c6?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/a5c50176a8189e6ea3d5c91fb5d6faf38edac896?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/76ddd7433b17659b3fcd503e48093baf1f04b317?page=1&per_page=100>
+{'additions': 10,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-10T06:09:18Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-10T06:09:18Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 4,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver-Webtoon-Crawler',
+ 'sha': '76ddd7433b17659b3fcd503e48093baf1f04b317'}
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/b4b5a5aece8dd992c99b8ae4fcdce22818b09b9f?page=1&per_page=100>
+{'additions': 2,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-10T05:09:45Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-10T05:09:45Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver-Webtoon-Crawler',
+ 'sha': 'b4b5a5aece8dd992c99b8ae4fcdce22818b09b9f'}
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/81ffe8f30cf2616545b1050467cd12e9bbf849c6?page=1&per_page=100>
+{'additions': 38,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-10T05:03:34Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-10T05:03:34Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver-Webtoon-Crawler',
+ 'sha': '81ffe8f30cf2616545b1050467cd12e9bbf849c6'}
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/a27bab5af854935a2c2560637964d5775e04d6e6?page=1&per_page=100>
+{'additions': 0,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-10T04:07:49Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-10T04:07:49Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver-Webtoon-Crawler',
+ 'sha': 'a27bab5af854935a2c2560637964d5775e04d6e6'}
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/OSSW_IoT/issues>
+{'close_issue_count': 0,
+ 'open_issue_count': 0,
+ 'path': 'tsfo1489/OSSW_IoT',
+ 'target': 'issue'}
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/b25886cec0ad46972ceab801a1d811a1e6ddcb4e?page=1&per_page=100>
+{'additions': 4,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-11T00:12:59Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2018-07-11T00:12:59Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver-Webtoon-Crawler',
+ 'sha': 'b25886cec0ad46972ceab801a1d811a1e6ddcb4e'}
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/aecaca97826278715109f1c64d9da07c94e0f3c6?page=1&per_page=100>
+{'additions': 17,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-10T06:37:31Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-10T06:37:31Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 2,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver-Webtoon-Crawler',
+ 'sha': 'aecaca97826278715109f1c64d9da07c94e0f3c6'}
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/a5c50176a8189e6ea3d5c91fb5d6faf38edac896?page=1&per_page=100>
+{'additions': 2,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-10T06:14:37Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-10T06:14:37Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 2,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver-Webtoon-Crawler',
+ 'sha': 'a5c50176a8189e6ea3d5c91fb5d6faf38edac896'}
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/519c53cf7c05667b07be002a19305e898070910a?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/870d78be3c39f4e1c817cf0f0ad23c5050465293?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits?page=1&per_page=100)
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/519c53cf7c05667b07be002a19305e898070910a?page=1&per_page=100>
+{'additions': 13,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-11T05:04:35Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-11T05:04:35Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 5,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver-Webtoon-Crawler',
+ 'sha': '519c53cf7c05667b07be002a19305e898070910a'}
+2021-10-29 00:50:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/Naver-Webtoon-Crawler/commits/870d78be3c39f4e1c817cf0f0ad23c5050465293?page=1&per_page=100>
+{'additions': 4,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-11T05:04:47Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-11T05:04:47Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'Naver-Webtoon-Crawler',
+ 'sha': '870d78be3c39f4e1c817cf0f0ad23c5050465293'}
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/OSSW_IoT/commits?page=1&per_page=100> (referer: https://github.com/tsfo1489/OSSW_IoT)
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/5f40dc6fff97c55f7b010a53e56d1d9473f29e1d?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/221532c0590819ca2716e96181dddbc6aeee9351?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://github.com/tsfo1489/OSSW_IoT/pulls> (referer: https://github.com/tsfo1489/OSSW_IoT)
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/5f40dc6fff97c55f7b010a53e56d1d9473f29e1d?page=1&per_page=100>
+{'additions': 3426,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-02T08:28:32Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-02T08:28:32Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': '5f40dc6fff97c55f7b010a53e56d1d9473f29e1d'}
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/221532c0590819ca2716e96181dddbc6aeee9351?page=1&per_page=100>
+{'additions': 2,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-02T08:30:01Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2018-07-02T08:30:01Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': '221532c0590819ca2716e96181dddbc6aeee9351'}
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/ba4d0fe84ae90bb3b54b6f5fcf82deb0730bc3ca?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/e6fdfb2f16ca3303fab3daf04661d05c656f1b63?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://github.com/tsfo1489/OSSW_IoT/pulls>
+{'path': 'tsfo1489/OSSW_IoT', 'prs_count': 0, 'target': 'pr'}
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/b469b91f0fab79731fde3a3f4510f8a70f8888d2?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/dd998dec94254e1dcc822bfe876a39c348f9ccd7?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/W2V/commits/0afdc97cb1596cdc3682532d5d7f0863993a94c1?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/W2V/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/W2V/commits/dd2d5431fde732cbead1d78f5b28f9c126847c80?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/W2V/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/ba4d0fe84ae90bb3b54b6f5fcf82deb0730bc3ca?page=1&per_page=100>
+{'additions': 2,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-02T08:30:31Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2018-07-02T08:30:31Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': 'ba4d0fe84ae90bb3b54b6f5fcf82deb0730bc3ca'}
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/e6fdfb2f16ca3303fab3daf04661d05c656f1b63?page=1&per_page=100>
+{'additions': 2,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-02T08:30:49Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2018-07-02T08:30:49Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': 'e6fdfb2f16ca3303fab3daf04661d05c656f1b63'}
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/f69af183bd01538887590317cd4a66dcc9a06c88?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/b469b91f0fab79731fde3a3f4510f8a70f8888d2?page=1&per_page=100>
+{'additions': 16,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-03T00:35:31Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-03T00:35:31Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': 'b469b91f0fab79731fde3a3f4510f8a70f8888d2'}
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/dd998dec94254e1dcc822bfe876a39c348f9ccd7?page=1&per_page=100>
+{'additions': 0,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-03T00:35:56Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-03T00:35:56Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 40,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': 'dd998dec94254e1dcc822bfe876a39c348f9ccd7'}
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/W2V/commits/0afdc97cb1596cdc3682532d5d7f0863993a94c1?page=1&per_page=100>
+{'additions': 200224,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-24T12:13:24Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-24T12:13:24Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 1,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'W2V',
+ 'sha': '0afdc97cb1596cdc3682532d5d7f0863993a94c1'}
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/W2V/commits/dd2d5431fde732cbead1d78f5b28f9c126847c80?page=1&per_page=100>
+{'additions': 200280,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-23T14:16:01Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-23T14:16:01Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'W2V',
+ 'sha': 'dd2d5431fde732cbead1d78f5b28f9c126847c80'}
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/83e08e404f6ec1b4871e449df199d8bb085ea52c?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/d5c9fbc1e9bf1d6d701658af357e0e63e9431a0b?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/f69af183bd01538887590317cd4a66dcc9a06c88?page=1&per_page=100>
+{'additions': 0,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-03T00:32:49Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2018-07-03T00:32:49Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 40,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': 'f69af183bd01538887590317cd4a66dcc9a06c88'}
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/W2V/commits/90ebfffd0b59e30033131731576cde80858fd442?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/W2V/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/0a6d53010b9d7970c34be9b625c151581b8ea61f?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/83e08e404f6ec1b4871e449df199d8bb085ea52c?page=1&per_page=100>
+{'additions': 2,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-03T01:06:18Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-03T01:06:18Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': '83e08e404f6ec1b4871e449df199d8bb085ea52c'}
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/fab2942073b99a20c5ed1b065d293233ecff3140?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/d5c9fbc1e9bf1d6d701658af357e0e63e9431a0b?page=1&per_page=100>
+{'additions': 26,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-03T01:05:33Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-03T01:05:33Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': 'd5c9fbc1e9bf1d6d701658af357e0e63e9431a0b'}
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/3bbf4cfe573b5ffe3050d487d147f70e8c503d41?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/55c359035eb8faf65e5dbd32f30bd473414e8d88?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/2d3838d00329013650b4addba4a612c396cee93c?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/W2V/commits/90ebfffd0b59e30033131731576cde80858fd442?page=1&per_page=100>
+{'additions': 156185,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2021-06-24T07:52:01Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2021-06-24T07:52:01Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 13,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'W2V',
+ 'sha': '90ebfffd0b59e30033131731576cde80858fd442'}
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/0a6d53010b9d7970c34be9b625c151581b8ea61f?page=1&per_page=100>
+{'additions': 19,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-03T01:47:32Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-03T01:47:32Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': '0a6d53010b9d7970c34be9b625c151581b8ea61f'}
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/fab2942073b99a20c5ed1b065d293233ecff3140?page=1&per_page=100>
+{'additions': 13,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-03T01:24:24Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-03T01:24:24Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 9,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': 'fab2942073b99a20c5ed1b065d293233ecff3140'}
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/3bbf4cfe573b5ffe3050d487d147f70e8c503d41?page=1&per_page=100>
+{'additions': 60,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-03T06:53:15Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-03T06:53:15Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': '3bbf4cfe573b5ffe3050d487d147f70e8c503d41'}
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/0ba318c23ca8a7653f8b69f75a08d5c095572efb?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/e918719454937314e31b99a89f340849cd48e755?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/55c359035eb8faf65e5dbd32f30bd473414e8d88?page=1&per_page=100>
+{'additions': 15,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-04T00:37:58Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-04T00:37:58Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': '55c359035eb8faf65e5dbd32f30bd473414e8d88'}
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/2d3838d00329013650b4addba4a612c396cee93c?page=1&per_page=100>
+{'additions': 43,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-04T02:39:02Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-04T02:39:02Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': '2d3838d00329013650b4addba4a612c396cee93c'}
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/ccaccf69fae6f2e6beb5b7ce21dd643c7e758e02?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/0ba318c23ca8a7653f8b69f75a08d5c095572efb?page=1&per_page=100>
+{'additions': 14,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-04T03:59:35Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-04T03:59:35Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': '0ba318c23ca8a7653f8b69f75a08d5c095572efb'}
+2021-10-29 00:50:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/536853356d575bce2c6a3602e732fcfaf99f4935?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/e918719454937314e31b99a89f340849cd48e755?page=1&per_page=100>
+{'additions': 22,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-04T05:25:51Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-04T05:25:51Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': 'e918719454937314e31b99a89f340849cd48e755'}
+2021-10-29 00:50:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/cf995971f2a229f7574316d79efaefa7eebace83?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/8c3bd4eff1ba186845b9e6e8b06cf582e0c1873f?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/a5623f02f2900e52bde40359e3bc7eedf66795d2?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/BOJ/commits/fefce86ea76b1c7d8c6f7201779e015548a72db3?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/BOJ/commits?page=1&per_page=100)
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/ccaccf69fae6f2e6beb5b7ce21dd643c7e758e02?page=1&per_page=100>
+{'additions': 15,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-05T00:41:38Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-05T00:41:38Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': 'ccaccf69fae6f2e6beb5b7ce21dd643c7e758e02'}
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/536853356d575bce2c6a3602e732fcfaf99f4935?page=1&per_page=100>
+{'additions': 19,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-05T01:39:01Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-05T01:39:01Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': '536853356d575bce2c6a3602e732fcfaf99f4935'}
+2021-10-29 00:50:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/2ecdd9bb6af65215abcb7031086781cdd87e7204?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/OSSW_IoT/commits?page=1&per_page=100)
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/cf995971f2a229f7574316d79efaefa7eebace83?page=1&per_page=100>
+{'additions': 15,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-05T01:42:28Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-05T01:42:28Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': 'cf995971f2a229f7574316d79efaefa7eebace83'}
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/8c3bd4eff1ba186845b9e6e8b06cf582e0c1873f?page=1&per_page=100>
+{'additions': 19,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-06T01:24:36Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-06T01:24:36Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': '8c3bd4eff1ba186845b9e6e8b06cf582e0c1873f'}
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/a5623f02f2900e52bde40359e3bc7eedf66795d2?page=1&per_page=100>
+{'additions': 22,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-05T02:47:42Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-05T02:47:42Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': 'a5623f02f2900e52bde40359e3bc7eedf66795d2'}
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/BOJ/commits/fefce86ea76b1c7d8c6f7201779e015548a72db3?page=1&per_page=100>
+{'additions': 18,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2018-07-06T02:02:10Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'tsfo1489@gmail.com',
+ 'committer_date': '2018-07-06T02:02:10Z',
+ 'committer_github': 'tsfo1489',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'BOJ',
+ 'sha': 'fefce86ea76b1c7d8c6f7201779e015548a72db3'}
+2021-10-29 00:50:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/2d63d0cd80e341ed8d0798163e8662d350515efc?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/OSSW_IoT/commits?page=1&per_page=100)
+2021-10-29 00:50:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/44a794a391019a5da675b9c6a5693fb6182f1689?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/OSSW_IoT/commits?page=1&per_page=100)
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/2ecdd9bb6af65215abcb7031086781cdd87e7204?page=1&per_page=100>
+{'additions': 196,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2019-10-22T09:10:52Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2019-10-22T09:10:52Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'OSSW_IoT',
+ 'sha': '2ecdd9bb6af65215abcb7031086781cdd87e7204'}
+2021-10-29 00:50:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/f6b4160c979105901e6fafa6a90bb503fef054ea?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/OSSW_IoT/commits?page=1&per_page=100)
+2021-10-29 00:50:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/0968515e8a148a3b56b2afcf11e5b7a152a301bd?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/OSSW_IoT/commits?page=1&per_page=100)
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/2d63d0cd80e341ed8d0798163e8662d350515efc?page=1&per_page=100>
+{'additions': 1,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2019-10-22T08:55:10Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2019-10-22T08:55:10Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'OSSW_IoT',
+ 'sha': '2d63d0cd80e341ed8d0798163e8662d350515efc'}
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/44a794a391019a5da675b9c6a5693fb6182f1689?page=1&per_page=100>
+{'additions': 440,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2019-10-22T10:06:46Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2019-10-22T10:06:46Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 11,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'OSSW_IoT',
+ 'sha': '44a794a391019a5da675b9c6a5693fb6182f1689'}
+2021-10-29 00:50:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/04f3860097c2620f3665f9f0f17b21f86c1e5776?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/OSSW_IoT/commits?page=1&per_page=100)
+2021-10-29 00:50:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/529f5798284c24482bfefa678a2ebfa52f860523?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/OSSW_IoT/commits?page=1&per_page=100)
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/f6b4160c979105901e6fafa6a90bb503fef054ea?page=1&per_page=100>
+{'additions': 76,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2019-10-22T11:21:39Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2019-10-22T11:21:39Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 55,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'OSSW_IoT',
+ 'sha': 'f6b4160c979105901e6fafa6a90bb503fef054ea'}
+2021-10-29 00:50:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/fcc43f26ae17de75de6c5d8a8f16c04fb49afecf?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/OSSW_IoT/commits?page=1&per_page=100)
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/0968515e8a148a3b56b2afcf11e5b7a152a301bd?page=1&per_page=100>
+{'additions': 0,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2019-10-23T01:53:15Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2019-10-23T01:53:15Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'OSSW_IoT',
+ 'sha': '0968515e8a148a3b56b2afcf11e5b7a152a301bd'}
+2021-10-29 00:50:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/170236b7f1c8f1357c9265c107aa398f9eb5964d?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/OSSW_IoT/commits?page=1&per_page=100)
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/04f3860097c2620f3665f9f0f17b21f86c1e5776?page=1&per_page=100>
+{'additions': 2,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2019-10-22T11:26:08Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2019-10-22T11:26:08Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 2,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'OSSW_IoT',
+ 'sha': '04f3860097c2620f3665f9f0f17b21f86c1e5776'}
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/529f5798284c24482bfefa678a2ebfa52f860523?page=1&per_page=100>
+{'additions': 42,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2019-10-23T01:52:39Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2019-10-23T01:52:39Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 336,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'OSSW_IoT',
+ 'sha': '529f5798284c24482bfefa678a2ebfa52f860523'}
+2021-10-29 00:50:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/2e041eae4850bdf62d19b03a0e56669ed653ca7b?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/OSSW_IoT/commits?page=1&per_page=100)
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/fcc43f26ae17de75de6c5d8a8f16c04fb49afecf?page=1&per_page=100>
+{'additions': 431,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2019-10-23T01:53:44Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2019-10-23T01:53:44Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'OSSW_IoT',
+ 'sha': 'fcc43f26ae17de75de6c5d8a8f16c04fb49afecf'}
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/170236b7f1c8f1357c9265c107aa398f9eb5964d?page=1&per_page=100>
+{'additions': 0,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2019-10-23T05:48:55Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2019-10-23T05:48:55Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'OSSW_IoT',
+ 'sha': '170236b7f1c8f1357c9265c107aa398f9eb5964d'}
+2021-10-29 00:50:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/55bec1a9d01f4c15b3920bfa813f181a51f0b816?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/OSSW_IoT/commits?page=1&per_page=100)
+2021-10-29 00:50:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/1dbd7e4f5a028020b35501de7c51f45efff28a73?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/OSSW_IoT/commits?page=1&per_page=100)
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/2e041eae4850bdf62d19b03a0e56669ed653ca7b?page=1&per_page=100>
+{'additions': 36,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2019-10-24T00:27:15Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2019-10-24T00:27:15Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 16,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'OSSW_IoT',
+ 'sha': '2e041eae4850bdf62d19b03a0e56669ed653ca7b'}
+2021-10-29 00:50:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/8236eaf06e847d7ef5b4201639d27f94dc6a4e7e?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/OSSW_IoT/commits?page=1&per_page=100)
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/55bec1a9d01f4c15b3920bfa813f181a51f0b816?page=1&per_page=100>
+{'additions': 0,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2019-10-24T04:17:32Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2019-10-24T04:17:32Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'OSSW_IoT',
+ 'sha': '55bec1a9d01f4c15b3920bfa813f181a51f0b816'}
+2021-10-29 00:50:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/b691229429c163e96ba82708cb3e1e337fe8013d?page=1&per_page=100> (referer: https://api.github.com/repos/tsfo1489/OSSW_IoT/commits?page=1&per_page=100)
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/1dbd7e4f5a028020b35501de7c51f45efff28a73?page=1&per_page=100>
+{'additions': 0,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2019-10-24T04:17:59Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2019-10-24T04:17:59Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'OSSW_IoT',
+ 'sha': '1dbd7e4f5a028020b35501de7c51f45efff28a73'}
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/8236eaf06e847d7ef5b4201639d27f94dc6a4e7e?page=1&per_page=100>
+{'additions': 0,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2019-10-24T04:18:42Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2019-10-24T04:18:42Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'OSSW_IoT',
+ 'sha': '8236eaf06e847d7ef5b4201639d27f94dc6a4e7e'}
+2021-10-29 00:50:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://api.github.com/repos/tsfo1489/OSSW_IoT/commits/b691229429c163e96ba82708cb3e1e337fe8013d?page=1&per_page=100>
+{'additions': 0,
+ 'author': 'tsfo1489@gmail.com',
+ 'author_date': '2019-10-24T04:20:58Z',
+ 'author_github': 'tsfo1489',
+ 'committer': 'noreply@github.com',
+ 'committer_date': '2019-10-24T04:20:58Z',
+ 'committer_github': 'web-flow',
+ 'deletions': 0,
+ 'github_id': 'tsfo1489',
+ 'repo_name': 'OSSW_IoT',
+ 'sha': 'b691229429c163e96ba82708cb3e1e337fe8013d'}
+2021-10-29 00:50:26 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-10-29 00:50:26 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 205486,
+ 'downloader/request_count': 269,
+ 'downloader/request_method_count/GET': 269,
+ 'downloader/response_bytes': 3343628,
+ 'downloader/response_count': 269,
+ 'downloader/response_status_count/200': 257,
+ 'downloader/response_status_count/429': 12,
+ 'dupefilter/filtered': 3,
+ 'elapsed_time_seconds': 73.616551,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 10, 28, 15, 50, 26, 802956),
+ 'httpcompression/response_bytes': 16789792,
+ 'httpcompression/response_count': 257,
+ 'item_scraped_count': 314,
+ 'log_count/DEBUG': 584,
+ 'log_count/INFO': 11,
+ 'log_count/WARNING': 1,
+ 'memusage/max': 89800704,
+ 'memusage/startup': 55840768,
+ 'request_depth_max': 5,
+ 'response_received_count': 257,
+ 'retry/count': 12,
+ 'retry/reason_count/429 Unknown Status': 12,
+ 'scheduler/dequeued': 269,
+ 'scheduler/dequeued/memory': 269,
+ 'scheduler/enqueued': 269,
+ 'scheduler/enqueued/memory': 269,
+ 'start_time': datetime.datetime(2021, 10, 28, 15, 49, 13, 186405)}
+2021-10-29 00:50:26 [scrapy.core.engine] INFO: Spider closed (finished)

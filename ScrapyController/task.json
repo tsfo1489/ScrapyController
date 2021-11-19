@@ -1,0 +1,15 @@
+{
+    "CrawlerTest": {
+        "crawler": "SKKU_GitHub",
+        "log": "GitHub.log",
+        "parameters": {
+            "id": "tsfo1489"
+        },
+        "options": {
+            "LOG_LEVEL": "INFO",
+            "LOG_FILE": "GitHub.log"
+        },
+        "temp_log": "12345648977",
+        "status": "fin"
+    }
+}

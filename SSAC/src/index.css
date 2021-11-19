@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#ssac-icon {
+  width: 20px;
+  vertical-align: baseline;
+}
+h4 {
+  margin-top: 20%;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.container {
+  width: 640px;
+}
+.but-light {
+  gap: 5px 10px;
+}
+
+/** Card **/
+.card {
+  cursor: pointer;
+  width: 300px;
+  min-height: 200px;
+  border: 0cm;
+  background-color: #f8f9fa;
+
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform 0.3s linear;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+.card > .front {
+  transform: perspective(600px) rotateY(0deg);
+}
+.card > .back {
+  transform: perspective(600px) rotateY(180deg);
+}
+.card-content {
+  padding: auto;
+  text-align: center;
+  width: 100%;
+}
+/* End Card */
+
+.back .card-content:hover {
+  padding: auto;
+  text-align: center;
+  width: 100%;
+  overflow-y: scroll;
+  height: 200px;
+  resize: none;
+  top: 50%;
+  left: 50%;
+}
+#under_buttons {
+  width: 100%;
+  overflow: hidden;
+}
+#under_buttons Button {
+  list-style: none;
+  position: relative;
+  float: left;
+  display: block;
+  left: 21%;
+}
+h1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+ul > Button {
+  background: grey;
+  display: inline-block;
+  display: -moz-inline-box;
+  display: inline;
+  zoom: 1;
+  width: 18%;
+  text-align: center;
+}
+.dropdown-menu {
+  min-width: 8rem;
+}
+li {
+  list-style-type: none;
+  display: inline-block;
+  padding-right: 0;
+  width: 100%;
+  margin-right: 0;
+  background: transparent;
+  padding-left: 0;
+  margin-left: 0;
+}
+li:last-child {
+  margin-right: 0;
+  padding-right: 0;
+}
+#log_list {
+  display: block;
+  width: 100%;
+  height: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Scroll bar Custom */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #eeeeee;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #dddddd;
+}

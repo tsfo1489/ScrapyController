@@ -1,0 +1,14 @@
+nav {
+  display: flex;
+}
+.metadata {
+  display: flex;
+}
+#ssac-icon {
+  width: 20px;
+  vertical-align: baseline;
+}
+#log-analysis {
+  display: block;
+  border: 1px solid black;
+}

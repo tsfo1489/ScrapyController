@@ -18,19 +18,19 @@ def json_to_cmd(json_data):
         options.pop('LOG_LEVEL') # Delete Log Level option
     options = [f'-s {opt}={options[opt]}' for opt in options]
 
-    cmds = base + [json_data['name']] + parameters + options
+    cmds = base + [json_data['spider']] + parameters + options
     cmd = ' '.join(cmds)
     temp_hash = hashlib.md5(cmd.encode())
     temp_hash.update(str(datetime.now().timestamp()).encode())
     temp_log = temp_hash.hexdigest()
-    temp_logfile = f'{os.getcwd()}/{temp_log}.log'
+    temp_logfile = f'../log/{temp_log}.log'
     cmd += f' -s LOG_FILE={temp_logfile}'
-    final_log['TEMP_LOG'] = temp_logfile
+    final_log['TEMP_LOG'] = f'{temp_log}.log'
     return cmd, json_data['path'], final_log
 
 def executor(json_data: dict):
     cmd, path, log_setting = json_to_cmd(json_data)
-    open(log_setting['TEMP_LOG'], 'w').close()
+    open('./log/' + log_setting['TEMP_LOG'], 'w').close()
     proc = subprocess.Popen(cmd.split(), cwd=path, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     return proc.pid, log_setting
 

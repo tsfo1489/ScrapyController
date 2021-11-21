@@ -1,3 +1,4 @@
+import os
 import regex as re
 from stats import Stats
 from datetime import datetime
@@ -33,8 +34,9 @@ def LogParser(log_str):
 
 class LogWatcher:
     def __init__(self, log_file: str):
-        self.file = open(log_file, 'r', encoding='utf-8')
+        self.file = open('./log/' + log_file, 'r', encoding='utf-8')
         self.stat = Stats()
+
     def get_log(self):
         new_log = self.file.read()
         return LogParser(new_log)
@@ -45,10 +47,10 @@ class LogWatcher:
             self.stat.lastlog_time = log.Time
             if re.match('Scrapy.+started', log.MSG) is not None:
                 self.stat.start_time = log.Time
-                self.stat.status = 'RUN'
+                self.stat.status = 'run'
             if re.match('Spider closed', log.MSG) is not None:
                 self.stat.finish_time = log.Time
-                self.stat.status = 'FIN'
+                self.stat.status = 'finish'
             if re.match('Scraped from', log.MSG) is not None:
                 self.stat.item_count += 1
             if re.match('Crawled \([0-9]*\)', log.MSG) is not None:

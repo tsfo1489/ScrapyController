@@ -16,6 +16,7 @@ class Task extends Component {
     keywordList: [],
     crawlers: [],
     tasks: [],
+    geo: new Set(),
     NEWS_LIST: [
       "[CN]Global Times",
       "[US]New York Times",
@@ -28,9 +29,31 @@ class Task extends Component {
       "[FR]Le Monde",
       "[ES]El Pais",
     ],
+    NEWSNAME_LIST: [
+      "CN_globaltimes",
+      "US_nytimes",
+      "UK_guardian",
+      "US_latimes",
+      "SG_straitstimes",
+      "JP_asahi",
+      "JP_sankei",
+      "SA_bbcmundo",
+      "FR_lemonde",
+      "ES_elpais",
+    ],
     YOUTUBE_LIST: ["channel_ids", "playlist_ids", "video_ids"],
     TWITTER_LIST: ["user", "user_rt", "geo"],
-    REDDIT_LIST: ["kpop", "KDRAMA", "koreanvariety", "manhwa"],
+    TWITTER_GEO_LIST: [
+      "North_America",
+      "South_America",
+      "Southeast_Asia",
+      "Japan",
+      "Europe",
+      "India",
+      "Australia",
+      "South_Africa",
+      "Middle_East",
+    ],
     WEBTOON_LIST: ["Naver", "Tapas"],
   };
 
@@ -41,17 +64,32 @@ class Task extends Component {
       [e.target.name]: e.target.value,
     });
   };
+  handleGeo = (geo) => {
+    let set = new Set();
+    console.log("geo", geo);
+    set.add(geo);
+    if (this.state.geo.has(geo)) {
+      this.state.geo.delete(geo);
+    } else {
+      this.setState({
+        geo: this.state.geo.add(this.state.TWITTER_GEO_LIST[geo]),
+      });
+    }
+    console.log("set geo", this.state.geo);
+  };
   handleCheck = (submedia, check) => {
     let set = new Set();
+    console.log("sub", submedia);
+    if (submedia >= 20) {
+      // its twittergeo
+      this.handleGeo(submedia % 10);
+      return;
+    }
     set.add(submedia);
     if (check === 1) {
-      if (this.state.submedia.has(submedia)) {
-        this.state.submedia.delete(submedia);
-      } else {
-        this.setState({
-          submedia: this.state.submedia.add(submedia),
-        });
-      }
+      this.setState({
+        submedia: this.state.submedia.add(submedia),
+      });
     } else if (check === 0) {
       if (this.state.submedia.has(submedia)) {
         this.state.submedia.delete(submedia);
@@ -114,7 +152,9 @@ class Task extends Component {
     }
     switch (this.state.mediaName) {
       case "News":
-        mediaName = "News";
+        let setIter = this.state.submedia.values();
+        let newsmedia = setIter.next().value;
+        mediaName = this.state.NEWSNAME_LIST[newsmedia];
         hasDate = true;
         break;
       case "Youtube":
@@ -131,7 +171,6 @@ class Task extends Component {
         mediaName = "Webtoon";
         hasDate = false;
         param = "webtoons";
-        console.log("test ", this.state.submedia);
         break;
       case "IMDB":
         mediaName = "imdb";
@@ -149,7 +188,22 @@ class Task extends Component {
           },
           options: {
             LOG_LEVEL: "INFO",
-            LOG_FILE: "youtube.log",
+            LOG_FILE: "imdb.log",
+          },};`
+      )();
+    } else if (this.state.mediaName === "Reddit") {
+      console.log("red", Array.from(this.state.submedia).join(","));
+      result = new Function(
+        `return{name: '${mediaName}',
+          parameters: {
+            ${param}: '${this.state.keywordList.join(",")}',
+            subreddit: '${Array.from(this.state.submedia).join(",")}',
+            begin_date: ${this.state.begin_date.split("-").join("")},
+            end_date: ${this.state.end_date.split("-").join("")},
+          },
+          options: {
+            LOG_LEVEL: "INFO",
+            LOG_FILE: "reddit.log",
           },};`
       )();
     } else {
@@ -184,7 +238,22 @@ class Task extends Component {
         }
         console.log("out param ", param);
         let ret;
-        if (hasDate === true) {
+
+        if (this.state.mediaName === "Twitter") {
+          ret = new Function(
+            `return{name: '${mediaName}',
+          parameters: {
+            ${param}: '${this.state.keywordList.join(",")}',
+            begin_date: ${this.state.begin_date.split("-").join("")},
+            end_date: ${this.state.end_date.split("-").join("")},
+            geo: '${Array.from(this.state.geo).join(",")}',
+          },
+          options: {
+            LOG_LEVEL: "INFO",
+            LOG_FILE: "${mediaName}.log",
+          },};`
+          )();
+        } else if (hasDate === true) {
           ret = new Function(
             `return{name: '${mediaName}',
           parameters: {
@@ -422,20 +491,7 @@ class Task extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-light bg-light">
-          <div className="container">
-            <span className="navbar-brand mb-0 h1">
-              <img id="ssac-icon" src="images/sprout.png"></img> SSAC
-            </span>
-            <button
-              type="button"
-              className="btn btn-sm btn-success me-1"
-              onClick={this.handleGetCrawler}
-            >
-              <i className="bi bi-arrow-bar-down"></i>
-            </button>
-          </div>
-        </nav>
+        <NavForm key="nav" name="nav" />
         <div className="container">
           <div className="d-flex align-items-center mb-2 mt-2">
             <div className="dropdown">
@@ -556,8 +612,8 @@ class Task extends Component {
             </div>
           </div>
 
-          <div className="d-flex">
-            <div className="flex-grow-1 bg-light rounded-2 p-2 me-1 w-50">
+          <div className="d-flex card-container">
+            <div className="flex-grow-1 bg-light rounded-2 p-2 w-50">
               <form onSubmit={this.handleSubmit}>
                 <div className="d-flex align-items-center mb-2 mt-2">
                   <h3>Settings</h3>
@@ -658,7 +714,7 @@ class Task extends Component {
               </div>
             </div>
           </div>
-          <div className="d-flex">
+          <div className="d-flex card-container">
             <div className="flex-grow-1 bg-light rounded-2 p-2 w-50">
               <h3>Run</h3>
               <div id="run-list">
@@ -794,6 +850,9 @@ class Task extends Component {
             </div>
           </div>
         </div>
+        <footer className="bg-light">
+          <div className="container">SKKU</div>
+        </footer>
       </div>
     );
   }
@@ -803,9 +862,41 @@ class SubInputForm extends Component {
   handleCheck = (e) => {
     // pass parameter 1(checkbox) or 0(radio)
     const val = e.target.value;
-    if (parseInt(val / 10) === 0 || parseInt(val / 10) === 3)
-      this.props.handleCheck(val % 10, 1);
+    if (parseInt(val / 10) === 3) this.props.handleCheck(val % 10, 1);
     else this.props.handleCheck(val % 10, 0); // radio
+  };
+  handleGeo = (e) => {
+    const val = e.target.value;
+    console.log("handlegeo", val);
+    console.log("props", this.props);
+    this.props.handleCheck(val, 1); // radio
+  };
+  handleKeyword = (e) => {
+    const addSubredditButton = document.getElementById("add-subreddit");
+    const subreddit = document.getElementById("subredditKeyword");
+
+    let btnSubredditKeyword = document.createElement("button");
+    btnSubredditKeyword.setAttribute(
+      "class",
+      "btn btn-light ms-1 me-1 mt-1 mb-1 subreddit-keyword"
+    );
+    btnSubredditKeyword.innerText =
+      document.getElementById("subreddit-input").value;
+    const checkKeyword = document.getElementsByClassName("subreddit-keyword");
+    if (btnSubredditKeyword.innerText === "") {
+      addSubredditButton.className = "btn btn-danger ms-1 text-nowrap";
+      return;
+    }
+    for (let i = 0; i < checkKeyword.length; i++) {
+      if (checkKeyword.item(i).innerText === btnSubredditKeyword.innerText) {
+        addSubredditButton.className = "btn btn-danger ms-1 text-nowrap";
+        return;
+      }
+    }
+    subreddit.appendChild(btnSubredditKeyword);
+    this.props.handleCheck(document.getElementById("subreddit-input").value, 1);
+    document.getElementById("subreddit-input").value = "";
+    addSubredditButton.className = "btn btn-primary ms-1 text-nowrap";
   };
   render() {
     const NEWS_LIST = [
@@ -848,7 +939,6 @@ class SubInputForm extends Component {
     let geo = false;
     if (this.props.medianame === "News") {
       mediaIdx = 0;
-      checkform = "checkbox";
     } else if (this.props.medianame === "Youtube") mediaIdx = 1;
     else if (this.props.medianame === "Twitter") {
       mediaIdx = 2;
@@ -860,7 +950,31 @@ class SubInputForm extends Component {
     else {
       subSelect = false;
     }
-
+    if (this.props.medianame === "Reddit") {
+      return (
+        <div
+          id="subredditKeyword"
+          className="d-flex align-items-center mb-2 mt-2"
+        >
+          <input
+            type="text"
+            className="form-control"
+            id="subreddit-input"
+            placeholder="Enter a subreddit here"
+            name="subreddit"
+            onChange={this.handleChange}
+          />
+          <button
+            type="button"
+            id="add-subreddit"
+            className="btn btn-primary ms-1 text-nowrap"
+            onClick={this.handleKeyword}
+          >
+            <i className="bi bi-plus"></i>
+          </button>
+        </div>
+      );
+    }
     if (subSelect && !geo) {
       return (
         <div className="d-flex justify-content-start flex-wrap mt-2 mb-2">
@@ -909,7 +1023,7 @@ class SubInputForm extends Component {
                     key={GEO_LIST.indexOf(select) + 1}
                     value={mediaIdx * 10 + GEO_LIST.indexOf(select) + 1}
                     id={"checkbox" + (GEO_LIST.indexOf(select) + 1)}
-                    onChange={this.handleCheck}
+                    onChange={this.handleGeo}
                   />
                   <label
                     className="form-check-label"
@@ -1017,6 +1131,42 @@ class CardForm extends Component {
           </div>
         </div>
       );
+  }
+}
+
+class NavForm extends Component {
+  constructor(props) {
+    super(props);
+    this.child = React.createRef();
+  }
+  render() {
+    return (
+      <nav className="navbar navbar-light bg-light">
+        <div className="container">
+          <div className="navbar-brand mb-0 h1">
+            <div className="d-flex">
+              <img id="ssac-icon" src="images/sprout.png" alt="ssac-icon"></img>{" "}
+              SSAC
+              <span className="nav-item">
+                <a href="/" className="active">
+                  Control
+                </a>
+              </span>
+              <span className="nav-item">
+                <a href="/monitor">Monitoring</a>
+              </span>
+            </div>
+          </div>
+          <button
+            type="button"
+            className="btn btn-sm btn-success me-1"
+            onClick={this.handleGetCrawler}
+          >
+            <i className="bi bi-arrow-bar-down"></i>
+          </button>
+        </div>
+      </nav>
+    );
   }
 }
 export default Task;

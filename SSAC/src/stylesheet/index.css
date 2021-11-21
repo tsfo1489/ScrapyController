@@ -6,11 +6,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-#ssac-icon {
-  width: 20px;
-  vertical-align: baseline;
-}
 h4 {
   margin-top: 20%;
 }
@@ -26,16 +21,25 @@ code {
 }
 
 /** Card **/
+#task-list {
+  /* text-align: center; */
+  text-align: justify;
+}
+.card-container {
+  min-height: 300px;
+}
 .card {
   cursor: pointer;
-  width: 300px;
-  min-height: 200px;
+  width: 290px;
+  min-height: 195px;
   border: 0cm;
   background-color: #f8f9fa;
 
   transition: transform 0.6s;
   transform-style: preserve-3d;
   position: relative;
+  display: inline-block;
+  margin: 0px 2px;
 }
 .card.is-flipped {
   transform: rotateY(180deg);

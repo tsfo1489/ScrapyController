@@ -1,0 +1,23 @@
+.nav-item {
+  margin-left: 15px;
+}
+.nav-item > a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: lightgrey;
+}
+a.active {
+  color: black;
+}
+#ssac-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: baseline;
+}
+.icon {
+  height: 60px;
+}
+footer {
+  padding-bottom: 20px;
+  margin-top: 20px;
+}

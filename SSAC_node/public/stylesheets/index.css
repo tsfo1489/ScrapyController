@@ -16,6 +16,13 @@ code {
 .container {
   max-width: 925px;
   min-width: 640px;
+  /* margin-bottom: 40px; */
+}
+.top-container {
+  margin-top: 20px;
+}
+.main{
+  margin-bottom: 50px;
 }
 .but-light {
   gap: 5px 10px;
@@ -28,22 +35,8 @@ code {
 }
 .card-container {
   min-height: 300px;
-}
-.card {
-  cursor: pointer;
-  width: 290px;
-  min-height: 195px;
-  border: 0cm;
-  background-color: #f8f9fa;
-
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  position: relative;
-  display: inline-block;
-  margin: 0px 2px;
-}
-.card.is-flipped {
-  transform: rotateY(180deg);
+  display: flex;
+  justify-content: space-between;
 }
 .front,
 .back {
@@ -163,4 +156,12 @@ li:last-child {
 #date-container > div > button {
   font-size: 0.8rem;
   margin: 0px;
+}
+.input-params{
+    display: block;
+    width:50%;
+    margin-bottom: 10px;
+}
+.input-param{
+border: 1px solid #ced4da;
 }

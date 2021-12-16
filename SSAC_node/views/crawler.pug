@@ -1,0 +1,74 @@
+extends layout
+
+block vars
+  - var menu = "crawlers";
+
+block content 
+  div
+    navform
+      .container.main
+        .d-flex.justify-content-between.top-container.align-item-center
+          h3 Crawler
+          button.btn.btn-sm.btn-primary.h-25(type='button' data-bs-toggle='modal' data-bs-target='#AddModal') +
+        .flex-grow-1.bg-light.rounded-3.p-2.w-100
+          table.table.table-striped.w-100.text-center
+            thead
+              tr
+                th Name
+                th Path
+                th Spiders
+                th Parameters
+            tbody
+              -for(crawler in data)
+                -for(idx in Object.keys(data[crawler]['spiders']))
+                  -var spider = Object.keys(data[crawler]['spiders'])[idx]
+                  if(idx == 0)
+                    tr 
+                      td.align-middle(rowspan=Object.keys(data[crawler]['spiders']).length) #{crawler}
+                      td.align-middle(rowspan=Object.keys(data[crawler]['spiders']).length) #{data[crawler]['path']}
+                      td #{spider}
+                      td 
+                        -for(idx in data[crawler]['spiders'][spider]['parameters'])
+                          -var param = data[crawler]['spiders'][spider]['parameters'][idx]
+                          span.badge.badge-pill.mx-1(style="background-color: #" + param_color[param]) #{param}
+                  else
+                    tr
+                      td #{spider}
+                      td 
+                        -for(idx in data[crawler]['spiders'][spider]['parameters'])
+                          -var param = data[crawler]['spiders'][spider]['parameters'][idx]
+                          span.badge.badge-pill.mx-1(style="background-color: #" + param_color[param]) #{param}
+      #AddModal.modal.fade(tabindex='-1' aria-labelledby='AddModalLabel' aria-hidden='true' data-url='/schedules/add')
+        .modal-dialog.modal-dialog-centered
+          .modal-content
+            .modal-header
+              h5#AddModalLabel.modal-title Add Crawler
+              button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+            .modal-body
+              .mb-3 
+                label.from-label Name
+                input.form-control#CrawlerName(type='text' aria-describedby="Schedule Name")
+                .form-text#LogHelp Enter Crawler name
+              .mb-3
+                label.from-label Path
+                input.form-control#PathText(type='text' placeholder='Path' aria-label='Path' aria-describedby='PathDesc')
+                .form-text#PathDesc Enter Project Path
+              .d-flex.justify-content-between.mb-1
+                label.from-label.pt-1 Spiders
+                button.btn.btn-sm.btn-primary(onclick='AddSpider()' type='button' title="Add Spider") +
+              #spiders
+                .spider-group.mb-3#spider-0(name='0')
+                  .input-group.mb-1
+                    button.btn.btn-outline-danger(onclick='DeleteSpider()' type='button' disabled title="Delete Spider") -
+                    input.form-control.spider-name(type='text' placeholder="Spider Name" aria-label="Spider Name")
+                    button.btn.btn-outline-success(onclick='AddParam(0)' type='button' title="Add Parameters") +
+                  .spider-param.ms-3
+              .mb-3
+                .input-group
+                  input#CrawlerFile.form-control(type='file' aria-describedby="FileDesc")
+                .form-text#FileDesc Upload Scrapy Project Zip
+            .modal-footer
+              button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+              button.btn.btn-primary(type='button' onclick='Submit()') Submit
+block scripts 
+  script(type="text/javascript", src="/javascripts/crawlers.js")

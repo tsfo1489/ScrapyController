@@ -1,0 +1,65 @@
+extends layout
+
+block vars
+  - var menu = "tasks";
+
+block content 
+  div.main
+    navform
+      .container.top-container
+        .d-flex.justify-content-between
+          h3#TaskName #{title}
+          .btn-toolbar(role="toolbar" aria-label="Status")
+            .btn-group.m-auto(role="group")
+              a.btn.btn-outline-primary(href="/crawlers" title="Crawler" type="button") #{data['crawler']}
+              a.btn.btn-outline-primary(href="/crawlers" title="Spider" type="button") #{data['spider']}
+              if data['status'] == 'finish'
+                a.btn.btn-primary#status(type="button" title="Status") #{data['status']}
+              if data['status'] == 'run'
+                a.btn.btn-success#status(type="button" title="Status") #{data['status']}
+              if data['status'] == 'ready'
+                a.btn.btn-warning#status(type="button" title="Status") #{data['status']}
+            if data['status'] == 'finish'
+              .btn-group.ms-2.m-auto(role="group")
+                a.btn.btn-success(type="button" onclick="json_download()") 
+                  svg.bi.bi-download(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewbox='0 0 16 16')
+                    path(d='M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z')
+                    path(d='M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z')
+            .btn-group.ms-2.m-auto(role="group")
+              if data['status'] == 'run'
+                a.btn.btn-primary(type="button" onclick="location.reload()") Refresh
+              if data['status'] == 'ready'
+                a.btn.btn-success(type="button" onclick="run()") Start
+              if data['status'] != 'run'
+                a.btn.btn-danger(type="button" onclick="delete_task()") Delete
+        .bg-light.rounded-3.p-2.w-100
+          .row.pb-2
+            .col-6
+              h5 Start Time: #{data['start_time']}
+              h5 Finish Time: #{data['finish_time']}
+            .col-6
+              h5 
+                | Log File: 
+                | #{data['log']}
+              .d-flex.align-middle.parameters
+                h5.me-1 Parameters:
+                -for(param in data['parameters'])
+                  span.badge.h-25.ms-1.my-auto(style="background-color: #" + param_color[param]) #{param}: #{data['parameters'][param]}
+          if(data['status'] != 'ready')
+            .row
+              .col-3 
+                h6 Response Cnt
+                -for( let rescode in data['res_count'])
+                  button.btn(type="button", res=`${rescode}`) #{rescode} 
+                    span.badge.bg-secondary.align-middle #{data['res_count'][rescode]}
+              .col-9
+                nav.navbar#LogLevelselector.text-black.p-3.pb-2.rounded-top(style="background-color: lightgray")
+                  h5.my-0.mb-1 LogViewer
+                  div
+                    -for(loglevel in data['log_count'])
+                      button.btn.position-relative.active(data-bs-toggle="button" type="button" level=`${loglevel}` onclick='ChangeFilter()') #{loglevel} 
+                        span.badge.bg-secondary.text-white #{data['log_count'][loglevel]}
+                .overflow-auto(data-bs-spy="scroll")
+                  .accordion#LogViewer
+block scripts 
+  script(type="text/javascript", src="/javascripts/task_monitor.js")

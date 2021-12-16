@@ -1,0 +1,35 @@
+extends layout
+
+block vars
+  - var menu = "task";
+
+block content
+  .container.main
+    .d-flex.justify-content-between.top-container.align-item-center
+      h3 Task
+      button.btn.btn-sm.btn-primary.h-25(type='button' data-bs-toggle='modal' data-bs-target='#AddModal') + 
+    .d-flex.card-container
+      .flex-grow-1.bg-light.rounded-2.p-2.w-50
+        h3 Ready
+        #ready_card
+      .flex-grow-1.bg-light.rounded-2.p-2.w-50
+        h3 Run
+        #run_card
+    .d-flex.card-container
+      .flex-grow-1.bg-light.rounded-2.p-2.w-100
+        h3 Finish
+        #finish_card.d-inline-flex.flex-wrap.w-100
+  #AddModal.modal.fade(tabindex='-1' aria-labelledby='AddModalLabel' aria-hidden='true' data-url='/config')
+    .modal-dialog.modal-dialog-centered
+      .modal_content
+        .modal-header
+          h5#AddModalLabel.modal-title Add Task
+          button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+        .modal-body ...
+        .modal-footer
+          button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+          button.btn.btn-primary(type='button') Save
+    
+block scripts
+  script(type="text/javascript", src="/javascripts/control.js")
+  script(type="text/javascript", src="/javascripts/refresh.js")

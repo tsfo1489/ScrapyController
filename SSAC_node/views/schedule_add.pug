@@ -1,0 +1,52 @@
+.modal-dialog.modal-dialog-centered
+  .modal-content
+    .modal-header
+      h5#AddModalLabel.modal-title New Schedule
+      button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+    .modal-body
+      form
+        .mb-3 
+          label.from-label Name
+          input.form-control#ScheduleName(type='text' aria-describedby="Schedule Name")
+          .form-text#LogHelp Enter schedule name
+        .mb-3
+          label.form-label Crawler
+          select.form-select#crawler-select(aria-label='Crawler Option' onchange="CrawlerChange()")
+            option(selected) Choose Crawler
+            -for(crawler in data)
+              option(value=crawler) #{crawler}
+        .mb-3
+          label.form-label Spider
+          select.form-select.form-select-sm#spider-select(aria-label='Spider Option' onchange="SpiderChange()" disabled)
+            option(selected) Choose Spider
+            option(value='1') 1
+            option(value='2') 2
+        .mb-3
+          label.form-label Cycle
+          .justify-content-center.d-flex
+            .form-check.form-check-inline
+              input#cycleCheckbox1.form-check-input(type='radio' value='day' name="CycleOptions" onclick="ChangeCycle()" checked)
+              label.form-check-label(for='cycleCheckbox1') Day
+            .form-check.form-check-inline
+              input#cycleCheckbox2.form-check-input(type='radio' value='week' name="CycleOptions" onclick="ChangeCycle()")
+              label.form-check-label(for='cycleCheckbox2') Week
+            .form-check.form-check-inline
+              input#cycleCheckbox3.form-check-input(type='radio' value='month' name="CycleOptions" onclick="ChangeCycle()")
+              label.form-check-label(for='cycleCheckbox3') Month
+          label.form-label Day
+          input.form-control#DaysText(type='text' aria-describedby="DayHelp" disabled)
+          .form-text#DayHelp 
+            | Week(0, 1, 2) => Mon, Tue, Wed
+            | Month(10, 20, 30) => 10th, 20th, 30th
+        .mb-3 
+          label.from-label Time
+          input.form-control#TimeText(type='text' aria-describedby="TimeHelp")
+          .form-text#TimeHelp Enter Time (Ex. 15:30)
+        .mb-3 
+          label.from-label Log
+          input.form-control#LogText(type='text' aria-describedby="LogHelp")
+          .form-text#LogHelp Enter log file name
+        .mb-3#parameters
+    .modal-footer
+      button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+      button.btn.btn-primary(type='button' onclick="Submit()") Submit

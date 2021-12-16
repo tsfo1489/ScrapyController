@@ -1,0 +1,14 @@
+block vars
+  - var menu = "task";
+nav.navbar.navbar-light.bg-light
+  div.container
+    div.navbar-brand.mb-0.h1
+      div.d-flex
+        //-- img#ssac-icon(src='/images/sprout.png' alt='ssac-icon')
+        //-- | SSAC
+        div.nav-item
+          a(href='/' class=`${menu === 'task' ? 'active' : ''}`) Task
+        div.nav-item
+          a(href='/crawlers' class=`${menu === 'crawlers' ? 'active' : ''}`) Crawlers
+        div.nav-item
+          a(href='/schedules' class=`${menu === 'schedules' ? 'active' : ''}`) Schedules

@@ -4,17 +4,96 @@ import API from "./API.js";
 class Task extends Component {
   constructor(props) {
     super(props);
+    let today = new Date();
+    let year = today.getFullYear();
+    let month = ("0" + (today.getMonth() + 1)).slice(-2);
+    let day = ("0" + today.getDate()).slice(-2);
+    this.dateString = year + "-" + month + "-" + day;
+    this.metaCrawlers = {
+  "SKKU_GitHub": {
+    "path": "SKKU",
+    "spiders": {
+      "github": {
+        "parameters": [
+          "id",
+          "date"
+        ]
+      }
+    }
+  },
+  "ArsPraxia": {
+    "path": "Ars",
+    "spiders": {
+      "webtoon_naver": {
+        "parameters": [
+          "id"
+        ]
+      },
+      "webtoon_tapas": {
+        "parameters": [
+          "id"
+        ]
+      },
+      "Youtube": {
+        "parameters": [
+          "channel_ids",
+          "playlist_ids",
+          "video_ids"
+        ]
+      }
+    }
+  }
+};
+    this.metaSpiders = [{
+      "github": {
+        "parameters": [
+          "id",
+          "date"
+        ]
+      }
+    ,"webtoon_naver": {
+        "parameters": [
+          "id"
+        ]
+      },
+      "webtoon_tapas": {
+        "parameters": [
+          "id"
+        ]
+      },
+      "Youtube": {
+        "parameters": [
+          "channel_ids",
+          "playlist_ids",
+          "video_ids"
+        ]
+      }}];
+    this.setState({
+      tasks: [],
+      metaCrawlers: this.metaCrawlers,
+      metaSpiders: this.metaSpiders,
+      end_date: this.dateString,
+    });
     this.child = React.createRef();
+    //this.handleGetCrawler();
+    this.handleGetMetaTask();
   }
   state = {
     taskName: "",
     mediaName: "Media",
+    crawlerName: "Crawler",
+    spiderName:"Spider",
     submedia: new Set(),
     begin_date: "2021-06-01",
-    end_date: "2021-06-30",
+    end_date: this.dateString,
+    loglevel: "INFO",
     keyword: "",
     keywordList: [],
     crawlers: [],
+    metaCrawlers:[],
+    metaSpiders:[],
+    metaPrams:[],
+    project: '0',
     tasks: [],
     geo: new Set(),
     NEWS_LIST: [
@@ -56,10 +135,9 @@ class Task extends Component {
     ],
     WEBTOON_LIST: ["Naver", "Tapas"],
   };
-
   handleChange = (e) => {
-    console.log("name", e.target.name);
-    console.log("value", e.target.value);
+    console.log(e.target.name);
+    console.log(e.target.value);
     this.setState({
       [e.target.name]: e.target.value,
     });
@@ -77,6 +155,20 @@ class Task extends Component {
     }
     console.log("set geo", this.state.geo);
   };
+  handleProject = (e) =>{
+    console.log("target project name", e.target.name);
+    this.setState({
+      project: e.target.name,
+      crawlerName:e.target.innerText,
+    });
+  }
+  handleSpider = (e) =>{
+    //console.log("target spider name", e.target.name);
+    this.setState({
+      spiderName:e.target.innerText,
+    });
+    //console.log("keys",Object.keys(this.state.metaSpiders[this.state.project]));
+  }
   handleCheck = (submedia, check) => {
     let set = new Set();
     console.log("sub", submedia);
@@ -140,162 +232,187 @@ class Task extends Component {
       }),
     });
   };
-  handleCrawler = (e) => {
-    e.preventDefault();
-    let addCrawlerButton = document.querySelector("#add_crawler");
-    let hasDate = true;
-    let param = "keywords";
-    let mediaName = "";
-    if (this.state.submedia.size === 0 && this.state.mediaName !== "IMDB") {
-      addCrawlerButton.className = "btn btn-danger ms-1 text-nowrap";
-      return;
-    }
-    switch (this.state.mediaName) {
-      case "News":
-        let setIter = this.state.submedia.values();
-        let newsmedia = setIter.next().value;
-        mediaName = this.state.NEWSNAME_LIST[newsmedia];
-        hasDate = true;
-        break;
-      case "Youtube":
-        mediaName = "Youtube";
-        hasDate = false;
-        break;
-      case "Twitter":
-        mediaName = "Twitter";
-        break;
-      case "Reddit":
-        mediaName = "Reddit";
-        break;
-      case "Webtoon":
-        mediaName = "Webtoon";
-        hasDate = false;
-        param = "webtoons";
-        break;
-      case "IMDB":
-        mediaName = "imdb";
-        param = "ids";
-        break;
-      default:
-        break;
-    }
-    let result = "";
-    if (this.state.mediaName === "IMDB") {
-      result = new Function(
-        `return{name: '${mediaName}',
-          parameters: {
-            ${param}: '${this.state.keywordList.join(",")}',
-          },
-          options: {
-            LOG_LEVEL: "INFO",
-            LOG_FILE: "imdb.log",
-          },};`
-      )();
-    } else if (this.state.mediaName === "Reddit") {
-      console.log("red", Array.from(this.state.submedia).join(","));
-      result = new Function(
-        `return{name: '${mediaName}',
-          parameters: {
-            ${param}: '${this.state.keywordList.join(",")}',
-            subreddit: '${Array.from(this.state.submedia).join(",")}',
-            begin_date: ${this.state.begin_date.split("-").join("")},
-            end_date: ${this.state.end_date.split("-").join("")},
-          },
-          options: {
-            LOG_LEVEL: "INFO",
-            LOG_FILE: "reddit.log",
-          },};`
-      )();
-    } else {
-      result = Array.from(this.state.submedia).map((sub) => {
-        console.log("in map ", this.state.mediaName);
-        if (this.state.mediaName === "Twitter") {
-          if (Number.parseInt(sub) === 1) {
-            mediaName = "twitter_user";
-            param = "users";
-          } else if (Number.parseInt(sub) === 2) {
-            mediaName = "twitter_user_rt";
-            param = "users";
-          } else if (Number.parseInt(sub) === 3) {
-            mediaName = "twitter_geo";
-            param = "keywords";
-          }
-        } else if (this.state.mediaName === "Youtube") {
-          if (Number.parseInt(sub) === 1) {
-            param = "channel_ids";
-            console.log("param ", param);
-          } else if (Number.parseInt(sub) === 2) {
-            param = "playlist_ids";
-          } else if (Number.parseInt(sub) === 3) {
-            param = "video_ids";
-          }
-        } else if (this.state.mediaName === "Webtoon") {
-          if (Number.parseInt(sub) === 1) {
-            mediaName = "webtoon_naver";
-          } else if (Number.parseInt(sub) === 2) {
-            mediaName = "webtoon_tapas";
-          }
-        }
-        console.log("out param ", param);
-        let ret;
-
-        if (this.state.mediaName === "Twitter") {
-          ret = new Function(
-            `return{name: '${mediaName}',
-          parameters: {
-            ${param}: '${this.state.keywordList.join(",")}',
-            begin_date: ${this.state.begin_date.split("-").join("")},
-            end_date: ${this.state.end_date.split("-").join("")},
-            geo: '${Array.from(this.state.geo).join(",")}',
-          },
-          options: {
-            LOG_LEVEL: "INFO",
-            LOG_FILE: "${mediaName}.log",
-          },};`
-          )();
-        } else if (hasDate === true) {
-          ret = new Function(
-            `return{name: '${mediaName}',
-          parameters: {
-            ${param}: '${this.state.keywordList.join(",")}',
-            begin_date: ${this.state.begin_date.split("-").join("")},
-            end_date: ${this.state.end_date.split("-").join("")},
-          },
-          options: {
-            LOG_LEVEL: "INFO",
-            LOG_FILE: "${mediaName}.log",
-          },};`
-          )();
-        } else {
-          ret = new Function(
-            `return{name: '${mediaName}',
-          parameters: {
-            ${param}: '${this.state.keywordList.join(",")}'
-          },
-          options: {
-            LOG_LEVEL: "INFO",
-            LOG_FILE: "${mediaName}.log",
-          },};`
-          )();
-        }
-        return ret;
-      });
+  handleLog = (e) => {
+    let loglevel = e.target.innerText;
+    if (loglevel === "Information") {
+      loglevel = "INFO";
     }
     this.setState({
-      crawlers: this.state.crawlers.concat(result),
+      loglevel: loglevel.toUpperCase(),
     });
-
-    console.log(this.state.crawlers);
-    this.setState({
-      mediaName: "Media",
-      begin_date: this.state.begin_date,
-      end_date: this.state.end_date,
-      keyword: "",
-      keywordList: [],
-    });
-    addCrawlerButton.className = "btn btn-primary ms-1 text-nowrap";
+    const btnLoglevel = document.getElementById("btnLoglevel");
+    if (loglevel === "INFO")
+      btnLoglevel.className =
+        "btn btn-primary dropdown-toggle dropdown-toggle-split show";
+    else if (loglevel === "Warning")
+      btnLoglevel.className =
+        "btn btn-warning dropdown-toggle dropdown-toggle-split show";
+    else if (loglevel === "Error")
+      btnLoglevel.className =
+        "btn btn-danger dropdown-toggle dropdown-toggle-split show";
+    else if (loglevel === "Critical")
+      btnLoglevel.className =
+        "btn btn-dark dropdown-toggle dropdown-toggle-split show";
   };
+  handleSchedule = (e) => {
+    console.log("schedule");
+  };
+  // handleCrawler = (e) => {
+  //   e.preventDefault();
+  //   let addCrawlerButton = document.querySelector("#add_crawler");
+  //   let hasDate = true;
+  //   let param = "keywords";
+  //   let mediaName = "";
+  //   if (this.state.submedia.size === 0 && this.state.mediaName !== "IMDB") {
+  //     addCrawlerButton.className = "btn btn-danger text-nowrap";
+  //     return;
+  //   }
+  //   switch (this.state.mediaName) {
+  //     case "News":
+  //       let setIter = this.state.submedia.values();
+  //       let newsmedia = setIter.next().value;
+  //       mediaName = this.state.NEWSNAME_LIST[newsmedia];
+  //       hasDate = true;
+  //       break;
+  //     case "Youtube":
+  //       mediaName = "Youtube";
+  //       hasDate = false;
+  //       break;
+  //     case "Twitter":
+  //       mediaName = "Twitter";
+  //       break;
+  //     case "Reddit":
+  //       mediaName = "Reddit";
+  //       break;
+  //     case "Webtoon":
+  //       mediaName = "Webtoon";
+  //       hasDate = false;
+  //       param = "webtoons";
+  //       break;
+  //     case "IMDB":
+  //       mediaName = "imdb";
+  //       param = "ids";
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  //   let result = "";
+  //   if (this.state.mediaName === "IMDB") {
+  //     result = new Function(
+  //       `return{name: '${mediaName}',
+  //         parameters: {
+  //           ${param}: '${this.state.keywordList.join(",")}',
+  //         },
+  //         options: {
+  //           LOG_LEVEL: '${this.state.loglevel}',
+  //           LOG_FILE: "${mediaName}.log",
+  //         },};`
+  //     )();
+  //   } else if (this.state.mediaName === "Reddit") {
+  //     console.log("red", Array.from(this.state.submedia).join(","));
+  //     result = new Function(
+  //       `return{name: '${mediaName}',
+  //         parameters: {
+  //           ${param}: '${this.state.keywordList.join(",")}',
+  //           subreddit: '${Array.from(this.state.submedia).join(",")}',
+  //           begin_date: ${this.state.begin_date.split("-").join("")},
+  //           end_date: ${this.state.end_date.split("-").join("")},
+  //         },
+  //         options: {
+  //           LOG_LEVEL: '${this.state.loglevel}',
+  //           LOG_FILE: "${mediaName}.log",
+  //         },};`
+  //     )();
+  //   } else {
+  //     result = Array.from(this.state.submedia).map((sub) => {
+  //       console.log("in map ", this.state.mediaName);
+  //       if (this.state.mediaName === "Twitter") {
+  //         if (Number.parseInt(sub) === 1) {
+  //           mediaName = "twitter_user";
+  //           param = "users";
+  //         } else if (Number.parseInt(sub) === 2) {
+  //           mediaName = "twitter_user_rt";
+  //           param = "users";
+  //         } else if (Number.parseInt(sub) === 3) {
+  //           mediaName = "twitter_geo";
+  //           param = "keywords";
+  //         }
+  //       } else if (this.state.mediaName === "Youtube") {
+  //         if (Number.parseInt(sub) === 1) {
+  //           param = "channel_ids";
+  //           console.log("param ", param);
+  //         } else if (Number.parseInt(sub) === 2) {
+  //           param = "playlist_ids";
+  //         } else if (Number.parseInt(sub) === 3) {
+  //           param = "video_ids";
+  //         }
+  //       } else if (this.state.mediaName === "Webtoon") {
+  //         if (Number.parseInt(sub) === 1) {
+  //           mediaName = "webtoon_naver";
+  //         } else if (Number.parseInt(sub) === 2) {
+  //           mediaName = "webtoon_tapas";
+  //         }
+  //       }
+  //       console.log("out param ", param);
+  //       let ret;
 
+  //       if (this.state.mediaName === "Twitter") {
+  //         console.log("end", this.state.end_date);
+  //         ret = new Function(
+  //           `return{name: '${mediaName}',
+  //         parameters: {
+  //           ${param}: '${this.state.keywordList.join(",")}',
+  //           begin_date: ${this.state.begin_date.split("-").join("")},
+  //           end_date: ${this.state.end_date.split("-").join("")},
+  //           geo: '${Array.from(this.state.geo).join(",")}',
+  //         },
+  //         options: {
+  //           LOG_LEVEL: '${this.state.loglevel}',
+  //           LOG_FILE: "${mediaName}.log",
+  //         },};`
+  //         )();
+  //       } else if (hasDate === true) {
+  //         ret = new Function(
+  //           `return{name: '${mediaName}',
+  //         parameters: {
+  //           ${param}: '${this.state.keywordList.join(",")}',
+  //           begin_date: ${this.state.begin_date.split("-").join("")},
+  //           end_date: ${this.state.end_date.split("-").join("")},
+  //         },
+  //         options: {
+  //           LOG_LEVEL: '${this.state.loglevel}',
+  //           LOG_FILE: "${mediaName}.log",
+  //         },};`
+  //         )();
+  //       } else {
+  //         ret = new Function(
+  //           `return{name: '${mediaName}',
+  //         parameters: {
+  //           ${param}: '${this.state.keywordList.join(",")}'
+  //         },
+  //         options: {
+  //           LOG_LEVEL: '${this.state.loglevel}',
+  //           LOG_FILE: "${mediaName}.log",
+  //         },};`
+  //         )();
+  //       }
+  //       return ret;
+  //     });
+  //   }
+  //   this.setState({
+  //     crawlers: this.state.crawlers.concat(result),
+  //   });
+
+  //   console.log(this.state.crawlers);
+  //   this.setState({
+  //     mediaName: "Media",
+  //     begin_date: this.state.begin_date,
+  //     end_date: this.state.end_date,
+  //     keyword: "",
+  //     keywordList: [],
+  //   });
+  //   addCrawlerButton.className = "btn btn-primary text-nowrap";
+  // };
   handleSubmit = (e) => {
     e.preventDefault();
     let createButton = document.querySelector("#create");
@@ -335,6 +452,28 @@ class Task extends Component {
 
     document.querySelector("#task-input").value = "";
     createButton.className = "btn btn-primary ms-1 text-nowrap";
+  };
+  handleGetMetaTask = () => {
+    const get = async () => {
+      try {
+        const result = await API.get("/crawlers");
+        console.log("[get taskmeta] ", result);
+        console.log("[get taskmeta] result.data", result.data);
+        const metaCrawlers = result.data;
+        console.log("metaCrawlers",metaCrawlers);
+        console.log("metaSpiders",Object.values(metaCrawlers));
+        
+        this.setState({
+          metaCrawlers: metaCrawlers,
+          metaSpiders: Object.values(metaCrawlers),
+        });
+        
+        return result;
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    get();
   };
   handleGetCrawler = () => {
     const get = async () => {
@@ -491,8 +630,58 @@ class Task extends Component {
   render() {
     return (
       <div>
-        <NavForm key="nav" name="nav" />
+        <NavForm
+          key="nav"
+          name="nav"
+          handleGetCrawler={this.handleGetCrawler}
+        />
         <div className="container">
+          {/* Crawlers dropdown */}
+          <div className="dropdown">
+              <button
+                className="btn btn-secondary dropdown-toggle me-2"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                {this.state.crawlerName}
+              </button>
+              <ul
+                className="dropdown-menu"
+                aria-labelledby="dropdownMenuButton1"
+              >
+              { Object.keys(this.state.metaCrawlers).map((name, idx)=>{
+                return (
+                 <li>  <button className="dropdown-item"
+                  name={name} onClick={this.handleProject}>
+                    {name} 
+                  </button>
+                  </li>);})}
+              </ul>
+          </div>
+          {/* Spiders Dropdown */}
+          <div className="dropdown">
+              <button
+                className="btn btn-secondary dropdown-toggle me-2"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                {this.state.spiderName}
+              </button>
+              <ul
+                className="dropdown-menu"
+                aria-labelledby="dropdownMenuButton1"
+              >
+              { Object.keys(this.state.metaSpiders[this.state.project]["spiders"]).map((name)=>{
+                return (
+                  <button className="dropdown-item" onClick={this.handleSpider}>
+                    <li> {name} </li>
+                  </button>);})}
+              </ul>
+          </div>
           <div className="d-flex align-items-center mb-2 mt-2">
             <div className="dropdown">
               <button
@@ -508,6 +697,7 @@ class Task extends Component {
                 className="dropdown-menu"
                 aria-labelledby="dropdownMenuButton1"
               >
+                
                 <li>
                   <button className="dropdown-item" onClick={this.handleMedia}>
                     News
@@ -578,37 +768,83 @@ class Task extends Component {
               );
             })}
           </div>
-          <div className="d-flex justify-content-between mb-2 mt-2">
-            <label htmlFor="start">FROM:</label>
+          <div
+            id="date-container"
+            className="d-flex justify-content-between mb-2 mt-2"
+          >
+            <label className="datelabel" htmlFor="start">
+              FROM:
+            </label>
             <input
               type="date"
               id="start"
               name="begin_date"
               defaultValue="2021-06-01"
-              min="2018-01-01"
-              max="2021-07-31"
+              min="2010-01-01"
+              max={this.state.end_date}
               onChange={this.handleChange}
             />
-            <label htmlFor="end">TO:</label>
-
+            <label className="datelabel" htmlFor="end">
+              TO:
+            </label>
             <input
               type="date"
               id="end"
               name="end_date"
-              defaultValue="2021-06-30"
-              min="2018-01-01"
-              max="2021-07-31"
+              defaultValue="2021-11-22"
+              min={this.state.begin_date}
+              max={this.dateString}
               onChange={this.handleChange}
             />
-            <div className="d-grid d-md-flex justify-content-md-end">
+
+            <div className="btn-group">
               <button
                 type="button"
+                id="add_schedule"
+                className="btn btn-secondary ms-1 text-nowrap"
+                onClick={this.handleSchedule}
+              >
+                <i className="bi bi-plus"></i> Scheduling
+              </button>
+              <button
+                type="button"
+                className="btn btn-primary text-nowrap"
                 id="add_crawler"
-                className="btn btn-primary ms-1 text-nowrap"
                 onClick={this.handleCrawler}
               >
                 <i className="bi bi-plus"></i> Set Crawler
               </button>
+              <button
+                type="button"
+                className="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                id="btnLoglevel"
+              >
+                <span className="visually-hidden">Toggle Dropdown</span>
+              </button>
+              <ul className="dropdown-menu" aria-labelledby="btnLoglevel">
+                <li>
+                  <button className="dropdown-item" onClick={this.handleLog}>
+                    Information
+                  </button>
+                </li>
+                <li>
+                  <button className="dropdown-item" onClick={this.handleLog}>
+                    Warning
+                  </button>
+                </li>
+                <li>
+                  <button className="dropdown-item" onClick={this.handleLog}>
+                    Error
+                  </button>
+                </li>
+                <li>
+                  <button className="dropdown-item" onClick={this.handleLog}>
+                    Critical
+                  </button>
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -762,7 +998,7 @@ class Task extends Component {
                               <div
                                 className="progress-bar w-75"
                                 role="progressbar"
-                                aria-valuenow="75"
+                                aria-valuenow="100"
                                 aria-valuemin="0"
                                 aria-valuemax="100"
                               ></div>
@@ -834,7 +1070,7 @@ class Task extends Component {
                               <div
                                 className="progress-bar bg-danger w-75"
                                 role="progressbar"
-                                aria-valuenow="75"
+                                aria-valuenow="100"
                                 aria-valuemin="0"
                                 aria-valuemax="100"
                               ></div>
@@ -1139,6 +1375,9 @@ class NavForm extends Component {
     super(props);
     this.child = React.createRef();
   }
+  handleGetCrawler = (e) => {
+    this.props.handleGetCrawler();
+  };
   render() {
     return (
       <nav className="navbar navbar-light bg-light">

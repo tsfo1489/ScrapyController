@@ -1,0 +1,47 @@
+extends layout
+
+block vars
+  - var menu = "schedules";
+
+block content 
+  div
+    navform
+      .container.main
+        .d-flex.justify-content-between.top-container.align-item-center
+          h3 Schedule
+          button.btn.btn-sm.btn-primary.h-25(type='button' data-bs-toggle='modal' data-bs-target='#AddModal') +
+        .flex-grow-1.bg-light.rounded-3.p-2.w-100
+          table.table.table-striped.w-100.text-center
+            thead
+              tr
+                th Name
+                th Crawler
+                th Spider
+                th Cycle
+                th Day
+                th Time
+                th Parameter
+            tbody
+              -for(sch in data)
+                tr 
+                  td #{sch}
+                  td #{data[sch]['crawler']}
+                  td #{data[sch]['spider']}
+                  td #{data[sch]['cycle']}
+                  td #{data[sch]['day']}
+                  td #{data[sch]['time']}
+                  td 
+                    -for(param in data[sch]['parameters'])
+                      span.badge(style="background-color: #" + param_color[param]) #{param}: #{data[sch]['parameters'][param]}
+      #AddModal.modal.fade(tabindex='-1' aria-labelledby='AddModalLabel' aria-hidden='true' data-url='/schedules/config')
+        .modal-dialog.modal-dialog-centered
+          .modal-content
+            .modal-header
+              h5#AddModalLabel.modal-title Add Schedule
+              button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+            .modal-body ...
+            .modal-footer
+              button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+              button.btn.btn-primary(type='button') Save changes
+block scripts 
+  script(type="text/javascript", src="/javascripts/schedules.js")

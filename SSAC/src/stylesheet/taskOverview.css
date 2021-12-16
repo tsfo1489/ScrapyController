@@ -1,0 +1,42 @@
+.task-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+}
+.task-header {
+  display: flex;
+  border-bottom: 1px lightgray solid;
+  min-height: 10px;
+  text-decoration: none;
+  padding: 6px 0px;
+}
+.task-desc {
+  display: flex;
+  border-bottom: 1px lightgray solid;
+  min-height: 50px;
+  text-decoration: none;
+  padding: 6px 0px;
+}
+.task-desc:hover {
+  background-color: gainsboro;
+}
+
+.flex-item-first {
+  flex-basis: 5%;
+  text-align: center;
+}
+.flex-item {
+  height: inherit;
+  vertical-align: middle;
+  flex-basis: 24%;
+  text-align: center;
+}
+.item-header {
+  color: lightgrey;
+  font-size: 0.8rem;
+}
+.btn-para {
+  font-size: 0.25rem;
+  margin: 1px;
+  padding: 2px 3px;
+}

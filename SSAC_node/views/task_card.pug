@@ -1,0 +1,42 @@
+-for(key in cards)
+  .card.m-1.flex-grow-1(class=(cards[key]['status'] == 'finish' ? "col-3" : ""))
+    h5.card-header.d-flex.justify-content-between.bg-secondary.text-white.align-items-center
+      .align-items-bottom
+        a.text-decoration-none.text-white(href="/tasks/" + key) #{key} 
+        br
+        small
+          small.text-black-50
+            if(cards[key]['by'] == 'schedule')
+              a.text-black-50.text-decoration-none(href='/schedules') by #{cards[key]['by']}
+            else 
+              | by #{cards[key]['by']}
+      if(cards[key]['status'] == 'ready')
+        button.btn.btn.btn-success(onclick='run("' + key + '")') Start
+    .card-body.pb-2
+      h5.card-title.mb-2
+        strong Crawler
+        | : #{cards[key]['crawler']} 
+      h6.card-subtitle.mb-1.text-muted 
+        strong Spider
+        | : #{cards[key]['spider']}
+      .mb-2
+        strong Log
+        | : #{cards[key]['log']}
+      if(cards[key]['status'] == 'finish')
+        .mb-1.finish-time
+          strong Start 
+          | #{cards[key]['stats']['start_time']} 
+          br
+          strong End 
+          | #{cards[key]['stats']['finish_time']}  
+        .mb-1.elapse-time 
+          strong Elapsed 
+          | #{ (parseInt((Date.parse(cards[key]["stats"]["finish_time"]) -Date.parse(cards[key]["stats"]["start_time"])) /1000 /60 /60) ? (parseInt((Date.parse(cards[key]["stats"]["finish_time"]) -Date.parse(cards[key]["stats"]["start_time"])) /1000 /60 /60) + "시간 ") : "")}
+          | #{ (parseInt(((Date.parse(cards[key]["stats"]["finish_time"]) -Date.parse(cards[key]["stats"]["start_time"])) /1000 /60) %60)) ?  (parseInt(((Date.parse(cards[key]["stats"]["finish_time"]) -Date.parse(cards[key]["stats"]["start_time"])) /1000 /60) % 60)+ "분 ") : ""}
+          | #{parseInt(((Date.parse(cards[key]["stats"]["finish_time"]) -Date.parse(cards[key]["stats"]["start_time"])) /1000) %60) + "초 "} 
+          
+      if(cards[key]['status'] == 'run')
+        p #{cards[key]['stats']['start_time']}
+      h6.mb-1 Parameters
+      -for(param in cards[key]['parameters'])
+        span.badge.me-2.mb-1(style="background-color: #" + param_color[param]) #{param}: #{cards[key]['parameters'][param ]}

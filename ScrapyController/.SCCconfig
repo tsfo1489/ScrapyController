@@ -1,0 +1,3 @@
+CRAWLER_FILE_PATH = 'crawler.json'
+TASK_FILE_PATH = 'task.json'
+SCHEDULE_FILE_PATH = 'schedule.json'

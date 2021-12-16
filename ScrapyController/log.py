@@ -17,6 +17,15 @@ class Log:
     
     def add_content(self, content):
         self.Content += '\n' + content
+        
+    def todict(self):
+        temp = {}
+        temp['time'] = self.Time.isoformat()
+        temp['location'] = self.Location
+        temp['level'] = self.Level
+        temp['msg'] = self.MSG
+        temp['content'] = self.Content
+        return temp
 
 def isLog(string):
     return len(string) > 10 and string[4] == '-' and string[7] == '-'
@@ -32,6 +41,19 @@ def LogParser(log_str):
             logList[-1].add_content(line)
     return logList
 
+def LogJson(log_file):
+    logList = []
+    with open('./log/' + log_file, 'r', encoding='utf-8') as lf:
+        log_str = lf.read()
+    if log_str == '':
+        return []
+    for line in log_str.split('\n'):
+        if isLog(line):
+            logList.append(Log(line))
+        else:
+            logList[-1].add_content(line)
+    return [x.todict() for x in logList]
+
 class LogWatcher:
     def __init__(self, log_file: str):
         self.file = open('./log/' + log_file, 'r', encoding='utf-8')
@@ -40,6 +62,7 @@ class LogWatcher:
     def get_log(self):
         new_log = self.file.read()
         return LogParser(new_log)
+    
     def get_stat(self):
         log_list = self.get_log()
         for log in log_list:

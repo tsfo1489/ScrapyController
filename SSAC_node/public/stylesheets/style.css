@@ -1,0 +1,168 @@
+.nav-item {
+  margin-left: 15px;
+}
+
+.nav-item>a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: lightgrey;
+}
+
+a.active {
+  color: black;
+}
+
+#ssac-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: baseline;
+}
+
+.icon {
+  height: 60px;
+}
+
+.btn.btn-primary {
+  min-width: 35px;
+  min-height: 35px;
+  /* padding:0px 3px 5px 3px;
+  vertical-align: middle;
+  font-size: 20px; */
+}
+
+button[level]{
+  color: #212529;
+  margin: 2.5px 2.5px;
+  text-align: left;
+}
+button[res] {
+  width: 100%;
+  margin: 5px 5px;
+  text-align: left;
+}
+
+button[res]>.badge {
+  float: right;
+}
+button[level]>.badge,
+button[res]>.badge {
+  margin-top: 3px;
+}
+
+button[level="ERROR"] {
+  border-color: #dc3545;
+}
+
+button[level="WARNING"] {
+  border-color: #ffc107;
+}
+
+button[level="INFO"] {
+  border-color: #0d6efd;
+}
+
+button[level="DEBUG"] {
+  border-color: #212529;
+}
+
+button.active[level="ERROR"] {
+  color: #fff;
+  background-color: #dc3545;
+}
+button:focus[level="ERROR"] {
+  box-shadow: 0 0 0 0.25rem #dc354640;
+}
+button.active[level="WARNING"] {
+  color: #fff;
+  background-color: #ffc107;
+}
+button:focus[level="WARNING"] {
+  box-shadow: 0 0 0 0.25rem #ffc10740;
+}
+button.active[level="INFO"] {
+  color: #fff;
+  background-color: #0d6efd;
+}
+button:focus[level="INFO"] {
+  box-shadow: 0 0 0 0.25rem #0d6efd40;
+}
+button.active[level="DEBUG"] {
+  color: #fff;
+  background-color: #212529;
+}
+button:focus[level="DEBUG"] {
+  box-shadow: 0 0 0 0.25rem #21252940;
+}
+
+
+
+button[res^="1"] {
+  color: #212529;
+  border-color: #212529;
+}
+
+button[res^="2"] {
+  color: #fff;
+  background-color: #198754;
+  border-color: #198754;
+}
+
+button[res^="3"] {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+button[res^="4"] {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+button[res^="5"] {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
+}
+
+#LogViewer{
+  max-height: 650px;
+}
+
+.accordion-button-nodata::after{
+  content: none;
+}
+
+footer {
+  height:45px; 
+  width: 100%;
+  background-image: none;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  position: fixed;
+  bottom: 0pt;
+  left: 0pt;
+  padding-top: 5px;
+  padding-bottom: 20px;
+}   
+
+#copyright {
+  margin-bottom: 0px;
+  font-size: 12px;
+}
+.logo-link {
+  color: black;
+  display: flex;
+  font-size: 12px;
+}
+.logo-link:nth-child(n) {
+  align-items: end;
+}
+.logo-link > a {
+  margin: 0px 5px;
+}
+
+.parameters{
+  flex-wrap: wrap;
+}
